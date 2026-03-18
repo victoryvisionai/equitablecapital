@@ -1,1 +1,1394 @@
-d
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equitable Capital Advisors — Strategic Access. Measurable Growth.</title>
+  <meta name="description" content="Equitable Capital helps exceptional companies access growth through strategic introductions, business development, capital relationships, and high-value advisory support.">
+  <meta property="og:title" content="Equitable Capital Advisors">
+  <meta property="og:description" content="Strategic introductions, revenue partnerships, and advisory for exceptional companies that need trusted access to hard-to-reach decision-makers.">
+  <meta property="og:url" content="https://www.equitablecapitaladvisors.com">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='4' fill='%231a3a6b'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='%23b8986a' font-family='Georgia'>E</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:    #1a3a6b;
+      --navy-dk: #0f2448;
+      --navy-xd: #081630;
+      --gold:    #b8986a;
+      --gold-lt: #d4b896;
+      --gold-dk: #8a6e42;
+      --white:   #ffffff;
+      --off:     #f8f7f4;
+      --rule:    #e6e2da;
+      --gray:    #8a8f9a;
+      --text:    #252525;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      background: rgba(8,22,48,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,152,106,0.18);
+      transition: padding 0.35s;
+    }
+    nav.scrolled { padding: 1rem 3.5rem; }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-mark {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--gold);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.35rem; font-weight: 300;
+      color: var(--gold);
+      letter-spacing: -1px;
+    }
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 1.05rem; font-weight: 400;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+    .nav-name span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.58rem; font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.72);
+      text-decoration: none;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta {
+      border: 1px solid var(--gold) !important;
+      color: var(--gold) !important;
+      padding: 0.5rem 1.3rem;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy-xd) !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 201;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px; height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ──────────────────────────────────────────────────────────────── */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--navy-xd);
+      overflow: hidden;
+    }
+
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(184,152,106,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,152,106,0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -200px; left: -200px;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,58,107,0.5) 0%, transparent 70%);
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: -150px; right: -100px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,152,106,0.08) 0%, transparent 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 9rem 3.5rem 5rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .hero-left {}
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 32px; height: 1px;
+      background: var(--gold);
+    }
+    .hero-tag-text {
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.07;
+      color: var(--white);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.35s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--gold-lt); }
+
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin-bottom: 2.8rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.5s forwards;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.65s forwards;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--navy-xd);
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+    .hero-right {
+      opacity: 0;
+      animation: fadeIn 1.1s 0.7s forwards;
+    }
+
+    .hero-outcomes {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,152,106,0.2);
+      border-radius: 4px;
+      padding: 2.8rem;
+    }
+    .hero-outcomes-title {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(184,152,106,0.15);
+    }
+    .outcome-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .outcome-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .outcome-icon {
+      width: 32px; height: 32px;
+      border-radius: 2px;
+      background: rgba(184,152,106,0.12);
+      border: 1px solid rgba(184,152,106,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .outcome-text {}
+    .outcome-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+    .outcome-desc {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    /* ── SECTION FOUNDATIONS ───────────────────────────────────────────────── */
+    section { padding: 7rem 0; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 3.5rem;
+    }
+
+    .s-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.4rem;
+    }
+    .s-label::before {
+      content: '';
+      width: 26px; height: 1px;
+      background: var(--gold);
+    }
+    .s-label-text {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .s-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--navy-dk);
+      margin-bottom: 1.4rem;
+    }
+    .s-title em { font-style: italic; }
+    .s-title.light { color: var(--white); }
+    .s-title.light em { color: var(--gold-lt); }
+
+    .s-body {
+      font-size: 0.98rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: #5a5a5a;
+    }
+    .s-body.light { color: rgba(255,255,255,0.58); }
+
+    /* ── ABOUT ─────────────────────────────────────────────────────────────── */
+    #about { background: var(--white); }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7rem;
+      align-items: start;
+    }
+
+    .about-right { padding-top: 1rem; }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      margin-top: 3.5rem;
+      background: var(--rule);
+    }
+    .about-stat {
+      background: var(--white);
+      padding: 2rem 1.8rem;
+    }
+    .stat-n {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-l {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .icp-callout {
+      background: var(--off);
+      border-left: 3px solid var(--gold);
+      padding: 2rem 2.2rem;
+      margin-top: 2.5rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .icp-callout-title {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .icp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .icp-tag {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--navy);
+      background: var(--white);
+      border: 1px solid var(--rule);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+    }
+
+    /* ── SERVICES ──────────────────────────────────────────────────────────── */
+    #services { background: var(--off); }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 5rem;
+      align-items: end;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--rule);
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: default;
+    }
+    .service-card:hover { transform: translateY(-3px); }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .service-title {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: var(--navy-dk);
+      margin-bottom: 0.9rem;
+      line-height: 1.2;
+    }
+    .service-body {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #666;
+    }
+
+    /* full-width 5th card */
+    .service-card.wide {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .service-card.wide .service-wide-left {}
+    .service-card.wide .service-body { max-width: 600px; }
+
+    /* ── ICP SECTION ───────────────────────────────────────────────────────── */
+    #icp { background: var(--navy-xd); }
+
+    .icp-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 7rem;
+      align-items: start;
+    }
+
+    .icp-verticals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      margin-top: 2rem;
+    }
+    .icp-vertical {
+      background: var(--navy-xd);
+      border: 1px solid rgba(184,152,106,0.1);
+      padding: 1.5rem;
+      transition: background 0.2s;
+    }
+    .icp-vertical:hover { background: rgba(26,58,107,0.4); }
+    .icp-vertical-name {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.3rem;
+    }
+    .icp-vertical-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .icp-personas {
+      margin-top: 3rem;
+    }
+    .icp-personas-title {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(184,152,106,0.15);
+    }
+    .persona-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .persona-chip {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+    }
+
+    .icp-fit {
+      background: rgba(184,152,106,0.07);
+      border: 1px solid rgba(184,152,106,0.18);
+      border-radius: 3px;
+      padding: 2.8rem;
+    }
+    .icp-fit-title {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 1.8rem;
+      line-height: 1.3;
+    }
+    .icp-fit-title em { font-style: italic; color: var(--gold-lt); }
+    .fit-items { list-style: none; }
+    .fit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+    .fit-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* ── APPROACH ──────────────────────────────────────────────────────────── */
+    #approach { background: var(--white); }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .approach-step {
+      position: relative;
+      padding-top: 2rem;
+    }
+    .approach-step::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 2px;
+      background: var(--gold);
+    }
+    .approach-num {
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.16em;
+      margin-bottom: 1rem;
+    }
+    .approach-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--navy-dk);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+    .approach-body {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #666;
+    }
+
+    /* ── CONTACT ───────────────────────────────────────────────────────────── */
+    #contact { background: var(--off); }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 7rem;
+      align-items: start;
+    }
+
+    .contact-left {}
+
+    .contact-detail {
+      margin-bottom: 2rem;
+    }
+    .contact-detail-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .contact-detail-value {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .contact-detail-value a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-detail-value a:hover { color: var(--gold); }
+
+    .contact-form-wrap {
+      background: var(--white);
+      padding: 3.2rem;
+      border-radius: 3px;
+      box-shadow: 0 8px 48px rgba(15,36,72,0.07);
+    }
+    .contact-form-wrap h3 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--navy-dk);
+      margin-bottom: 0.4rem;
+    }
+    .contact-form-wrap p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: #999;
+      margin-bottom: 2.2rem;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 0.45rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.82rem 1rem;
+      border: 1px solid #dedad2;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--navy-dk);
+      color: var(--white);
+      border: none;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.4rem;
+    }
+    .form-submit:hover { background: var(--navy); }
+
+    #formStatus {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      font-weight: 300;
+      display: none;
+    }
+    #formStatus.success { display: block; background: #eef7f2; color: #1e6640; border: 1px solid #b2ddc4; }
+    #formStatus.error   { display: block; background: #fdf0f0; color: #8b2020; border: 1px solid #f0c0c0; }
+
+    /* ── FOOTER ────────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy-xd);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(184,152,106,0.15);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3.5rem;
+    }
+    .footer-mark {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--gold);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.4rem; font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-desc {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.75;
+      max-width: 280px;
+    }
+    .footer-col-h {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-ul { list-style: none; }
+    .footer-ul li { margin-bottom: 0.6rem; }
+    .footer-ul a {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-ul a:hover { color: var(--gold-lt); }
+
+    .footer-contact-item { margin-bottom: 0.9rem; }
+    .footer-contact-l {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 0.2rem;
+    }
+    .footer-contact-v {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.48);
+    }
+    .footer-contact-v a {
+      color: rgba(255,255,255,0.48);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-contact-v a:hover { color: var(--gold-lt); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.28);
+    }
+    .footer-vv {
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.28);
+    }
+    .footer-vv a { color: var(--gold); text-decoration: none; }
+
+    /* ── ANIMATIONS ────────────────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { display: none; }
+      .about-layout { grid-template-columns: 1fr; }
+      .services-header { grid-template-columns: 1fr; }
+      .icp-layout { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      nav.scrolled { padding: 0.9rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed; inset: 0;
+        background: var(--navy-xd);
+        justify-content: center;
+        align-items: center;
+        gap: 2.2rem;
+        z-index: 199;
+      }
+      .nav-links.open a { font-size: 1rem; }
+      .nav-toggle { display: flex; }
+      .hero-content { padding: 6.5rem 1.5rem 4rem; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.wide { grid-template-columns: 1fr; gap: 1.5rem; }
+      .icp-verticals { grid-template-columns: 1fr 1fr; }
+      .approach-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-mark">E</div>
+    <div class="nav-name">
+      Equitable Capital
+      <span>Advisors</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#icp">Who We Serve</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Request Meeting</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="hero-tag-text">Strategic Advisory &amp; Business Development</span>
+      </div>
+      <h1 class="hero-h1">
+        Access that <em>accelerates</em> exceptional companies.
+      </h1>
+      <p class="hero-sub">
+        Equitable Capital helps exceptional companies access growth through strategic introductions, business development, capital relationships, and high-value advisory support — reaching decision-makers that traditional channels cannot.
+      </p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-gold">Our Services ↓</a>
+        <a href="#contact" class="btn-ghost">Request a Meeting</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-outcomes">
+        <div class="hero-outcomes-title">Measurable outcomes we create</div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🤝</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Qualified Introductions</div>
+            <div class="outcome-desc">Targeted access to decision-makers, partners, and capital providers who are difficult to reach through ordinary channels.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">📈</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Revenue-Generating Partnerships</div>
+            <div class="outcome-desc">Warm meetings and origination that converts to closed business, not just introductions.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">💼</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Capital Access</div>
+            <div class="outcome-desc">Connections to investors, lenders, family offices, and strategic counterparties where a credible path to transaction exists.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">⚡</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Accelerated Growth</div>
+            <div class="outcome-desc">Strategic opportunities that compress timelines and unlock relationships that took others years to build.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Who We Are</span></div>
+        <h2 class="s-title">Deep experience.<br><em>Hard-to-reach access.</em></h2>
+        <p class="s-body">
+          Equitable Capital is an advisory business that helps exceptional companies access growth through strategic introductions, business development, capital relationships, and high-value advisory support.
+        </p>
+        <p class="s-body" style="margin-top:1.2rem;">
+          The firm combines deep experience across private equity, investment banking, public company boards, AI-enabled growth systems, and long-standing relationships with CEOs, investors, family offices, operators, and decision-makers who are often difficult to reach through traditional channels.
+        </p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="stat-n">10+</div>
+            <div class="stat-l">Years Board Experience</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">NASDAQ</div>
+            <div class="stat-l">Listed Board Experience</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">PE</div>
+            <div class="stat-l">Private Equity Background</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">AI</div>
+            <div class="stat-l">Enabled Relationship Systems</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="s-label"><span class="s-label-text">Best-Fit Verticals</span></div>
+        <p class="s-body" style="margin-bottom:1.5rem;">
+          Equitable focuses where trust and access matter most — industries where the quality of a relationship determines the outcome, not the volume of outreach.
+        </p>
+        <div class="icp-callout">
+          <div class="icp-callout-title">Industries We Serve</div>
+          <div class="icp-tags">
+            <span class="icp-tag">Insurance &amp; Employee Benefits</span>
+            <span class="icp-tag">Wealth Management / RIAs</span>
+            <span class="icp-tag">Family Office Services</span>
+            <span class="icp-tag">Cybersecurity</span>
+            <span class="icp-tag">Private Security &amp; Risk</span>
+            <span class="icp-tag">Alternative Asset Managers</span>
+            <span class="icp-tag">Capital Providers</span>
+            <span class="icp-tag">Specialty Lenders</span>
+            <span class="icp-tag">Premium B2B Services</span>
+            <span class="icp-tag">Selective Media</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">What We Do</span></div>
+        <h2 class="s-title">Five ways we<br><em>create measurable outcomes.</em></h2>
+      </div>
+      <div class="reveal">
+        <p class="s-body">
+          Every engagement is structured to create a specific, tangible outcome — not activity. We focus on the introductions, partnerships, and strategic moves that actually move the needle.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">🎯</div>
+        <div class="service-title">Strategic Introductions</div>
+        <p class="service-body">Targeted, high-value introductions to decision-makers, strategic partners, capital providers, and customers that are difficult to reach through ordinary channels. Best for companies with a strong offering that need trusted access and a faster path to revenue.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon">🔄</div>
+        <div class="service-title">Revenue Origination Partnerships</div>
+        <p class="service-body">Equitable serves as a strategic origination partner for companies that want qualified opportunities, warm meetings, and revenue-generating introductions on a success-fee or hybrid basis. Ideal for firms that want growth without building a large internal business development team.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon">🧭</div>
+        <div class="service-title">Advisory and Positioning</div>
+        <p class="service-body">We help companies refine who they should target, how they should position their offer, and how to turn relationships into closed business. Includes go-to-market guidance, strategic messaging, relationship strategy, and executive-level counsel.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon">🏦</div>
+        <div class="service-title">Capital &amp; Strategic Opportunity Access</div>
+        <p class="service-body">We help selected businesses access investors, lenders, family offices, and strategic counterparties where there is a credible path to a transaction or meaningful strategic outcome. This work is tightly scoped and handled with regulatory care where securities laws may apply.</p>
+      </div>
+      <div class="service-card wide reveal">
+        <div class="service-wide-left">
+          <div class="service-num">05</div>
+          <div class="service-icon">⚙️</div>
+          <div class="service-title">AI-Enabled Relationship<br>Development</div>
+        </div>
+        <div>
+          <p class="service-body">Equitable uses the Victory Vision platform as internal infrastructure to identify targets, organize relationship maps, track outreach, and surface next-best actions across partners, prospects, and opportunities. This gives our clients the benefit of systematic, AI-enhanced business development without having to build or manage the technology themselves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="icp">
+  <div class="container">
+    <div class="icp-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Who We Serve</span></div>
+        <h2 class="s-title light">The right fit<br><em>matters more than scale.</em></h2>
+        <p class="s-body light" style="margin-bottom:2rem;">
+          Our primary ICP is founder-led or CEO-led companies with strong products or services, high average customer value, and a need for trusted access to buyers, capital providers, strategic partners, or other hard-to-reach decision-makers.
+        </p>
+        <div class="icp-verticals">
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Insurance &amp; Benefits</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Wealth Management</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Cybersecurity</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Private Security</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Alternative Assets</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Specialty Lending</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Premium Media</div>
+          </div>
+          <div class="icp-vertical">
+            <div class="icp-vertical-dot"></div>
+            <div class="icp-vertical-name">Premium B2B Services</div>
+          </div>
+        </div>
+        <div class="icp-personas">
+          <div class="icp-personas-title">Buyer Personas We Work With</div>
+          <div class="persona-list">
+            <span class="persona-chip">Founder / CEO</span>
+            <span class="persona-chip">President</span>
+            <span class="persona-chip">Head of Business Development</span>
+            <span class="persona-chip">Managing Partner</span>
+            <span class="persona-chip">Head of Strategic Partnerships</span>
+            <span class="persona-chip">COO</span>
+          </div>
+        </div>
+      </div>
+      <div class="icp-fit reveal">
+        <div class="icp-fit-title">You are a strong fit if you are <em>already credible but under-leveraged.</em></div>
+        <ul class="fit-items">
+          <li class="fit-item">B2B or high-ticket service business with meaningful average deal value</li>
+          <li class="fit-item">Founder or CEO who is credible but under-leveraged in business development</li>
+          <li class="fit-item">Needs warm access to decision-makers, not mass-market lead generation</li>
+          <li class="fit-item">Sells to enterprises, affluent individuals, family offices, PE-backed companies, or boards</li>
+          <li class="fit-item">Values quality of relationship over volume of contacts</li>
+          <li class="fit-item">Open to success fees, hybrid structures, or advisory retainers</li>
+          <li class="fit-item">Buyers require trust and context — cold outreach alone does not work</li>
+        </ul>
+        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(184,152,106,0.2);">
+          <a href="#contact" class="btn-gold" style="width:100%;justify-content:center;">Let's Discuss Your Situation →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="container">
+    <div class="reveal" style="max-width:700px;">
+      <div class="s-label"><span class="s-label-text">How We Work</span></div>
+      <h2 class="s-title">Outcomes-first.<br><em>Relationship-led.</em></h2>
+      <p class="s-body">Every engagement begins with understanding what a meaningful outcome actually looks like for your business — then we work backward from there.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 01</div>
+        <div class="approach-title">Understand the Outcome</div>
+        <p class="approach-body">We start by defining what success looks like with precision — the right partnership, the right capital source, the right customer — not activity metrics.</p>
+      </div>
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 02</div>
+        <div class="approach-title">Map the Relationship Path</div>
+        <p class="approach-body">We identify who needs to be in the room, who can open that door, and the fastest credible path to a first conversation with the right decision-maker.</p>
+      </div>
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 03</div>
+        <div class="approach-title">Execute with Precision</div>
+        <p class="approach-body">We make the introduction with context, credibility, and a clear reason for the conversation — giving you the best possible starting position in every new relationship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-left reveal">
+        <div class="s-label"><span class="s-label-text">Get in Touch</span></div>
+        <h2 class="s-title">Let's explore<br><em>what's possible.</em></h2>
+        <p class="s-body" style="margin-bottom:3rem;">
+          Whether you are looking for strategic introductions, a capital access conversation, advisory support, or want to explore whether Equitable is the right fit for your growth stage — we welcome the conversation.
+        </p>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value">
+         <a href="mailto:andrew@equitablecapitaladvisors.com">andrew@equitablecapitaladvisors.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Location</div>
+          <div class="contact-detail-value">
+            300 South 4th Street, 6th Floor<br>Las Vegas, NV 89101
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Website</div>
+          <div class="contact-detail-value">
+            <a href="https://www.equitablecapitaladvisors.com">www.equitablecapitaladvisors.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <h3>Request a Meeting</h3>
+        <p>Tell us about your company and what you are trying to accomplish.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" name="company">
+          </div>
+          <div class="form-group">
+            <label>What are you trying to accomplish?</label>
+            <select name="interest">
+              <option value="">Select one</option>
+              <option value="introductions">Strategic Introductions</option>
+              <option value="origination">Revenue Origination Partnership</option>
+              <option value="advisory">Advisory &amp; Positioning</option>
+              <option value="capital">Capital &amp; Strategic Access</option>
+              <option value="ai">AI-Enabled Business Development</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your situation</label>
+            <textarea name="message" placeholder="What does your company do, who do you need access to, and what would a meaningful outcome look like?"></textarea>
+          </div>
+          <input type="hidden" name="source" value="equitablecapitaladvisors.com">
+          <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+          <button type="submit" class="form-submit">Request Meeting →</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-mark">E</div>
+        <p class="footer-desc">Strategic introductions, revenue partnerships, capital access, and advisory for exceptional companies that need trusted access to hard-to-reach decision-makers.</p>
+      </div>
+      <div>
+        <div class="footer-col-h">Navigation</div>
+        <ul class="footer-ul">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#icp">Who We Serve</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Services</div>
+        <ul class="footer-ul">
+          <li><a href="#services">Strategic Introductions</a></li>
+          <li><a href="#services">Revenue Origination</a></li>
+          <li><a href="#services">Advisory &amp; Positioning</a></li>
+          <li><a href="#services">Capital Access</a></li>
+          <li><a href="#services">AI-Enabled BD</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">Email</div>
+      <div class="footer-contact-v"><a href="mailto:andrew@equitablecapitaladvisors.com">andrew@equitablecapitaladvisors.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">Location</div>
+          <div class="footer-contact-v">300 South 4th Street, 6th Floor<br>Las Vegas, NV 89101</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Equitable Capital Advisors. All Rights Reserved.</div>
+      <div class="footer-vv">Powered by <a href="https://www.victoryvision.app" target="_blank" rel="noopener">Victory Vision AI</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Mobile nav
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 90);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => obs.observe(el));
+
+  // Contact form
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      });
+      if (res.ok) {
+        status.className = 'success';
+        status.textContent = 'Thank you — we will be in touch shortly.';
+        form.reset();
+      } else { throw new Error(); }
+    } catch {
+      status.className = 'error';
+      status.textContent = 'Something went wrong. Please email us at andrew@equitablecapitaladvisors.com.';
+    } finally {
+      btn.textContent = 'Request Meeting →';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
