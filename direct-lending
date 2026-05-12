@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Direct Lending Opportunity — Equitable Capital Advisors</title>
+<meta name="description" content="Two institutional private-credit lenders actively seeking U.S. lower middle-market direct lending opportunities through the GT Securities platform."/>
+
+<!-- Microsoft UET -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16965842202"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16965842202');</script>
+
+<!-- LinkedIn Insight Tag (partner ID placeholder) -->
+<script>_linkedin_partner_id="YOUR_PARTNER_ID";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script>
+
+<style>
+  :root {
+    --navy: #0A3161;
+    --navy-dark: #072448;
+    --gold: #B8860B;
+    --bg: #FAFAFA;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #5a5a5a;
+    --line: #e5e7eb;
+    --check: #2d7a3d;
+    --xmark: #a0a0a0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55; font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* === Brand bar === */
+  .brand-bar {
+    background: white;
+    border-bottom: 2px solid var(--navy);
+  }
+  .brand-bar-inner {
+    max-width: 820px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;
+  }
+  .firm { font-weight: 700; color: var(--navy); font-size: 1.05rem; letter-spacing: 0.2px; }
+  .bd { font-size: 0.82rem; color: var(--muted); }
+
+  /* === Page container === */
+  .page { max-width: 820px; margin: 0 auto; padding: 36px 24px 60px; }
+
+  h1 {
+    color: var(--navy); font-size: 2rem; line-height: 1.2; margin: 0 0 12px;
+    font-weight: 700; letter-spacing: -0.01em;
+  }
+  .subhead {
+    color: var(--muted); font-size: 1.1rem; margin: 0 0 24px; font-weight: 400;
+  }
+  .lede {
+    font-size: 1.05rem; color: #2a2a2a; line-height: 1.6;
+    padding: 18px 22px; background: white; border-left: 4px solid var(--navy);
+    border-radius: 4px; margin: 0 0 22px;
+  }
+
+  /* === Primary CTA === */
+  .cta-primary {
+    display: inline-block; background: var(--navy); color: white;
+    padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 1rem;
+    text-decoration: none; transition: background 0.15s;
+    border: none; cursor: pointer;
+  }
+  .cta-primary:hover { background: var(--navy-dark); }
+  .cta-note {
+    color: var(--muted); font-size: 0.85rem; margin-top: 8px;
+  }
+
+  /* === Section === */
+  h2 {
+    color: var(--navy); font-size: 1.35rem; margin: 40px 0 14px;
+    font-weight: 700; letter-spacing: -0.005em;
+  }
+  h3 { color: var(--navy); font-size: 1.05rem; margin: 28px 0 10px; font-weight: 700; }
+
+  /* === Mandate cards === */
+  .mandates {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin: 16px 0 0;
+  }
+  @media (max-width: 700px) { .mandates { grid-template-columns: 1fr; } }
+  .mandate {
+    background: var(--card); border-radius: 12px; padding: 20px 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(10,49,97,0.05);
+    border: 1px solid var(--line);
+  }
+  .mandate h3 { margin-top: 0; color: var(--navy); font-size: 1.05rem; }
+  .mandate-sub {
+    color: var(--muted); font-size: 0.82rem; margin: -4px 0 14px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .mandate table {
+    width: 100%; border-collapse: collapse; font-size: 0.9rem;
+  }
+  .mandate td {
+    padding: 7px 0; border-bottom: 1px dashed var(--line);
+    vertical-align: top;
+  }
+  .mandate td:first-child { color: var(--muted); width: 38%; padding-right: 10px; }
+  .mandate td:last-child { color: var(--ink); }
+  .mandate tr:last-child td { border-bottom: none; }
+  .mandate-note {
+    color: var(--muted); font-size: 0.78rem; font-style: italic; margin-top: 12px;
+  }
+
+  /* === Fit / not-a-fit lists === */
+  .fit-list, .nofit-list { list-style: none; padding: 0; margin: 14px 0 0; }
+  .fit-list li, .nofit-list li {
+    padding: 10px 0 10px 30px; position: relative; line-height: 1.5;
+    border-bottom: 1px solid var(--line); font-size: 0.95rem;
+  }
+  .fit-list li:last-child, .nofit-list li:last-child { border-bottom: none; }
+  .fit-list li::before {
+    content: "✓"; position: absolute; left: 4px; top: 10px;
+    color: var(--check); font-weight: 700; font-size: 1.05rem;
+  }
+  .nofit-list li::before {
+    content: "✗"; position: absolute; left: 4px; top: 10px;
+    color: var(--xmark); font-weight: 700; font-size: 1.05rem;
+  }
+  .nofit-prefix { color: var(--muted); margin-top: 4px; font-size: 0.92rem; }
+  .closing-note {
+    margin-top: 16px; padding: 12px 16px; background: white;
+    border-left: 3px solid var(--gold); border-radius: 4px;
+    font-style: italic; color: #3a3a3a; font-size: 0.95rem;
+  }
+
+  /* === Process steps === */
+  .steps { list-style: none; padding: 0; margin: 16px 0 0; counter-reset: step; }
+  .steps li {
+    padding: 14px 0 14px 56px; position: relative; line-height: 1.5;
+    border-bottom: 1px solid var(--line); font-size: 0.95rem;
+    counter-increment: step;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 12px;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--navy); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.95rem;
+  }
+  .process-footnote {
+    color: var(--muted); font-size: 0.85rem; margin-top: 14px;
+    padding-top: 14px; border-top: 1px solid var(--line);
+  }
+
+  /* === Secondary CTA panel === */
+  .next-step {
+    background: var(--navy); color: white; border-radius: 12px;
+    padding: 30px 28px; margin: 44px 0 0;
+    text-align: center;
+  }
+  .next-step h2 { color: white; margin: 0 0 10px; font-size: 1.4rem; }
+  .next-step p { color: rgba(255,255,255,0.92); margin: 0 0 18px; font-size: 1rem; }
+  .next-step .name {
+    color: white; font-weight: 700; font-size: 1.05rem; margin-top: 8px;
+  }
+  .next-step .title-line {
+    color: rgba(255,255,255,0.78); font-size: 0.88rem; margin: 4px 0 18px;
+  }
+  .cta-gold {
+    display: inline-block; background: var(--gold); color: white;
+    padding: 13px 28px; border-radius: 6px; font-weight: 600;
+    text-decoration: none; transition: background 0.15s;
+    margin: 0 4px 8px;
+  }
+  .cta-gold:hover { background: #9a710a; }
+  .cta-outline {
+    display: inline-block; background: transparent; color: white;
+    padding: 12px 26px; border-radius: 6px; font-weight: 600;
+    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.5);
+    margin: 0 4px 8px; transition: background 0.15s;
+  }
+  .cta-outline:hover { background: rgba(255,255,255,0.1); }
+  .next-step .confidential {
+    color: rgba(255,255,255,0.72); font-size: 0.82rem; margin-top: 14px;
+  }
+
+  /* === About === */
+  .about {
+    background: white; border-radius: 8px; padding: 22px 26px; margin: 36px 0 0;
+    border: 1px solid var(--line);
+  }
+  .about h3 { margin-top: 0; }
+  .about p { margin: 0 0 12px; color: #3a3a3a; font-size: 0.94rem; }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* === Footer disclosure === */
+  .disclosure {
+    margin: 40px 0 0; padding: 22px 26px;
+    background: #f1f3f5; border-radius: 8px;
+    color: #555; font-size: 0.82rem; line-height: 1.55;
+    font-style: italic;
+  }
+  .copyright {
+    text-align: center; color: var(--muted); font-size: 0.78rem;
+    margin: 18px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- Brand bar -->
+<div class="brand-bar">
+  <div class="brand-bar-inner">
+    <div class="firm">Equitable Capital Advisors</div>
+    <div class="bd">Through the GT Securities platform · FINRA / SIPC</div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- Headline -->
+  <h1>Direct Lending Opportunity</h1>
+  <p class="subhead">Two institutional private-credit lenders actively seeking U.S. lower middle-market borrowers.</p>
+
+  <!-- Lede -->
+  <div class="lede">
+    Equitable Capital Advisors, a representative of GT Securities, has direct relationships with two institutional private-credit lenders actively seeking borrowing opportunities in the U.S. lower middle market. If your business — or a portfolio company you operate — has a near-term debt need that fits the profile below, we'd value a brief conversation to evaluate fit.
+  </div>
+
+  <!-- Primary CTA -->
+  <div>
+    <a class="cta-primary" href="mailto:glaze@equitablecap.com?subject=Direct%20Lending%20Inquiry"
+       onclick="trackEmailClick()">
+      Email Andrew Glaze
+    </a>
+    <div class="cta-note">Response within one business day. All conversations are confidential.</div>
+  </div>
+
+  <!-- Mandate cards -->
+  <h2>What's available</h2>
+  <div class="mandates">
+    <div class="mandate">
+      <h3>Mandate A</h3>
+      <div class="mandate-sub">Asian Institutional Lender</div>
+      <table>
+        <tr><td>Geography</td><td>U.S. preferred; select South America considered</td></tr>
+        <tr><td>Asset type</td><td>Senior secured, asset-backed, or cash-flowing credit</td></tr>
+        <tr><td>Transaction size</td><td>Approximately <strong>$7M – $10M+</strong></td></tr>
+        <tr><td>Tenor</td><td>Generally <strong>1 – 3 years</strong></td></tr>
+        <tr><td>Target return</td><td>Targeted approximately <strong>12.5%</strong> annualized, subject to underwriting and market conditions</td></tr>
+        <tr><td>Style</td><td>Direct lending preferred</td></tr>
+      </table>
+      <div class="mandate-note">Indicative parameters; the lender retains all credit and structuring decisions.</div>
+    </div>
+
+    <div class="mandate">
+      <h3>Mandate B</h3>
+      <div class="mandate-sub">U.S. Family-Office Private Credit</div>
+      <table>
+        <tr><td>Geography</td><td>United States</td></tr>
+        <tr><td>Focus</td><td>Short-term opportunistic credit for lower middle-market companies</td></tr>
+        <tr><td>Style</td><td>Direct lending; strictly debt (not equity)</td></tr>
+        <tr><td>Use cases</td><td>Working capital, bridge financing, acquisitions, inventory and trade finance, liquidity events</td></tr>
+        <tr><td>Transaction size</td><td><strong>$250K – $15M</strong>; core ticket <strong>$1M – $5M</strong></td></tr>
+        <tr><td>Tenor</td><td><strong>1 – 12 months</strong></td></tr>
+        <tr><td>Credit framework</td><td>Cash-flow-first; asset-based case-by-case (AR, inventory, real estate, equipment collateral)</td></tr>
+        <tr><td>Structure</td><td>Senior or junior secured to off-balance-sheet; up to 10% of revenue OR 1× TTM EBITDA</td></tr>
+        <tr><td>Economics</td><td>Targeted <strong>1.15× – 1.35× MOIC</strong>; weekly or bi-weekly amortization; prepayment discount may be available in the initial half of maturity</td></tr>
+      </table>
+      <div class="mandate-note">Indicative parameters; the lender retains all credit and structuring decisions.</div>
+    </div>
+  </div>
+
+  <!-- Who is a fit -->
+  <h2>Who is likely a fit</h2>
+  <ul class="fit-list">
+    <li>Founder, CEO, owner, or CFO of a U.S.-based operating company with revenue and meaningful cash flow (or substantive collateral) and a near-term capital need between $250K and $15M</li>
+    <li>Real estate operator with active acquisition, value-add, refinancing, or bridge-to-permanent needs on a 12–36 month horizon (fits Mandate A particularly well)</li>
+    <li>Inventory-heavy consumer, distribution, or wholesale business with AR-secured or inventory-secured financing needs</li>
+    <li>Lower middle-market private equity firm whose portfolio company requires working capital, bridge financing, or acquisition financing on tenors of 1–36 months</li>
+    <li>Multi-unit franchise operator with growth, equipment, or build-out capital needs in the $1M–$5M range</li>
+    <li>Founder facing a liquidity event — recapitalization, partial exit, dividend recap — that requires short-term bridge debt</li>
+  </ul>
+
+  <!-- Who is not a fit -->
+  <h2>Who is not a fit</h2>
+  <p class="nofit-prefix">To save everyone time:</p>
+  <ul class="nofit-list">
+    <li>Pre-revenue or seed-stage startups (both lenders require cash flow or substantive collateral)</li>
+    <li>Pure equity needs (both mandates are strictly debt-focused)</li>
+    <li>Capital needs below $250K, or above $15M for the U.S. mandate (above $10M for the Asian mandate is case-by-case)</li>
+    <li>Long-dated financing (3+ years) — out of tenor for both mandates</li>
+    <li>Over-leveraged borrowers where total debt would exceed roughly 1× TTM EBITDA on a pro-forma basis</li>
+    <li>Non-U.S. borrowers outside select South American jurisdictions for the Asian mandate; non-U.S. borrowers generally for the U.S. mandate</li>
+  </ul>
+  <div class="closing-note">
+    If you're unsure whether your situation fits, reach out anyway — a five-minute conversation will resolve it.
+  </div>
+
+  <!-- Process -->
+  <h2>How the process works</h2>
+  <ol class="steps">
+    <li>
+      <strong>Initial conversation</strong> — 15–30 minutes by phone or video to understand the use of proceeds, collateral, cash flow, and timeline. No documentation required at this stage.
+    </li>
+    <li>
+      <strong>If preliminary fit</strong> — a short structured information request: financial statements (last two fiscal years + most recent interim), capital structure, use of proceeds memo, collateral summary.
+    </li>
+    <li>
+      <strong>Lender introduction</strong> — Equitable Capital Advisors presents the opportunity to the appropriate lender. The lender, not Equitable, makes all credit and structuring decisions.
+    </li>
+    <li>
+      <strong>Term sheet, diligence, close</strong> — managed directly between borrower and lender, with Equitable Capital Advisors and GT Securities supporting the process.
+    </li>
+  </ol>
+  <div class="process-footnote">
+    All transactions are conducted through GT Securities as the registered broker-dealer. Fees are paid by the borrower (or other transaction parties) at close per the engagement letter; there are no fees for the initial conversation or preliminary review.
+  </div>
+
+  <!-- Secondary CTA -->
+  <div class="next-step">
+    <h2>Next step</h2>
+    <p>If this profile matches a current or anticipated capital need, please reach out.</p>
+    <div class="name">Andrew Glaze</div>
+    <div class="title-line">Equitable Capital Advisors · Registered Representative, GT Securities</div>
+    <a class="cta-gold" href="mailto:glaze@equitablecap.com?subject=Direct%20Lending%20Inquiry"
+       onclick="trackEmailClick()">
+      glaze@equitablecap.com
+    </a>
+    <a class="cta-outline" href="https://linkedin.com/in/aglaze" target="_blank" rel="noopener"
+       onclick="trackLinkedInClick()">
+      LinkedIn
+    </a>
+    <div class="confidential">Response within one business day. All conversations are confidential.</div>
+  </div>
+
+  <!-- About -->
+  <div class="about">
+    <h3>About</h3>
+    <p>Equitable Capital Advisors is a placement and capital advisory firm operating under the GT Securities broker-dealer platform. GT Securities is a registered broker-dealer and member of FINRA and SIPC.</p>
+    <p>Equitable Capital Advisors maintains direct relationships with institutional and private credit lenders actively seeking U.S. lower middle-market direct lending opportunities. Andrew Glaze is the founder of Equitable Capital Advisors, a West Point graduate and U.S. Army veteran with prior public-company board experience.</p>
+  </div>
+
+  <!-- Disclosure -->
+  <div class="disclosure">
+    This communication is for informational purposes only and is being provided to professional contacts of Equitable Capital Advisors and GT Securities to identify potential financing opportunities. It does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument, nor does it constitute investment, legal, tax, or accounting advice. Any transaction described herein would be conducted through GT Securities, a registered broker-dealer and member of FINRA and SIPC, pursuant to a separate engagement letter with the borrower. The lenders referenced will make all credit, structuring, and pricing decisions independently. Target returns, ranges, sizes, and tenor parameters are indicative descriptions of the lenders' stated preferences as of the date of this communication and are subject to change without notice; no specific return, structure, or commitment is offered or guaranteed. Past performance is not indicative of future results. All transactions are subject to lender approval, underwriting, documentation, market conditions, and applicable law. Recipients should consult their own legal, tax, and financial advisors. Equitable Capital Advisors and GT Securities are separate from the lenders referenced.
+  </div>
+
+  <div class="copyright">© 2026 Equitable Capital Advisors. All rights reserved.</div>
+
+</div>
+
+<!-- Conversion tracking -->
+<script>
+function trackEmailClick() {
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { 'send_to': 'AW-16965842202/DLR_Email_CTA_Click' });
+    }
+    if (window.uetq) { window.uetq.push('event', 'DLR_Email_CTA_Click', {}); }
+  } catch(e){}
+}
+function trackLinkedInClick() {
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { 'send_to': 'AW-16965842202/DLR_LinkedIn_CTA_Click' });
+    }
+    if (window.uetq) { window.uetq.push('event', 'DLR_LinkedIn_CTA_Click', {}); }
+  } catch(e){}
+}
+</script>
+
+</body>
+</html>
