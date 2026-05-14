@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The AI Client & Partner Development Desk — Equitable Capital Advisors</title>
+  <meta name="description" content="A repeatable system for winning new clients, referral partners, and strategic relationships. Built on Andrew Glaze's curated network and AI-enabled relationship intelligence.">
+  <meta property="og:title" content="The AI Client & Partner Development Desk">
+  <meta property="og:description" content="A repeatable system for winning new clients, referral partners, and strategic relationships.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='4' fill='%231a3a6b'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='%23b8986a' font-family='Georgia'>E</text></svg>">
+
+  <!-- ============ TRACKING PIXELS (shared with glaze@vvdoh.com tenant) ============ -->
+
+  <!-- Google Ads / GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18090497137');
+  </script>
+
+  <!-- Microsoft UET (Bing) -->
+  <script>
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97225334",enableAutoSpaTracking:true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  </script>
+
+  <!-- LinkedIn Insight Tag -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "8929812";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function(l) {
+      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8929812&fmt=gif" />
+  </noscript>
+
+  <!-- ============ FONTS ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:    #1a3a6b;
+      --navy-dk: #0f2448;
+      --navy-xd: #081630;
+      --gold:    #b8986a;
+      --gold-lt: #d4b896;
+      --gold-dk: #8a6e42;
+      --white:   #ffffff;
+      --off:     #f8f7f4;
+      --rule:    #e6e2da;
+      --gray:    #8a8f9a;
+      --text:    #252525;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      background: rgba(8,22,48,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,152,106,0.18);
+      transition: padding 0.35s;
+    }
+    nav.scrolled { padding: 1rem 3.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; flex-shrink: 0; }
+    .nav-mark {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--gold); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 1.35rem; font-weight: 300;
+      color: var(--gold); letter-spacing: -1px;
+    }
+    .nav-name {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+      color: var(--white); letter-spacing: 0.02em; line-height: 1.2;
+    }
+    .nav-name span {
+      display: block; font-family: var(--sans);
+      font-size: 0.58rem; font-weight: 300;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-top: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.72); text-decoration: none;
+      font-size: 0.7rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta {
+      border: 1px solid var(--gold) !important;
+      color: var(--gold) !important;
+      padding: 0.5rem 1.3rem; border-radius: 2px;
+      transition: background 0.2s, color 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy-xd) !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 201; }
+    .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: all 0.3s; }
+
+    /* ── HERO ──────────────────────────────────────────────────────────────── */
+    #home {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      background: var(--navy-xd); overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(184,152,106,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,152,106,0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .hero-glow {
+      position: absolute; top: -200px; left: -200px;
+      width: 800px; height: 800px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,58,107,0.5) 0%, transparent 70%);
+    }
+    .hero-glow-2 {
+      position: absolute; bottom: -150px; right: -100px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,152,106,0.08) 0%, transparent 70%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+      padding: 9rem 3.5rem 5rem; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 2rem; opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .hero-tag-text {
+      font-size: 0.62rem; font-weight: 400;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300; line-height: 1.07;
+      color: var(--white); margin-bottom: 2rem;
+      opacity: 0; animation: fadeUp 0.9s 0.35s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--gold-lt); }
+    .hero-sub {
+      font-size: 1rem; font-weight: 300; line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px; margin-bottom: 2.8rem;
+      opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.65s forwards; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: var(--navy-xd);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      font-size: 0.7rem; font-weight: 400;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-lt); }
+    .hero-right { opacity: 0; animation: fadeIn 1.1s 0.7s forwards; }
+    .hero-outcomes {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,152,106,0.2);
+      border-radius: 4px; padding: 2.8rem;
+    }
+    .hero-outcomes-title {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.8rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(184,152,106,0.15);
+    }
+    .outcome-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.4rem; padding-bottom: 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .outcome-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .outcome-icon {
+      width: 32px; height: 32px; border-radius: 2px;
+      background: rgba(184,152,106,0.12);
+      border: 1px solid rgba(184,152,106,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .outcome-title {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
+      color: var(--white); margin-bottom: 0.25rem;
+    }
+    .outcome-desc {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.45); line-height: 1.6;
+    }
+
+    /* ── SECTION FOUNDATIONS ───────────────────────────────────────────────── */
+    section { padding: 7rem 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 3.5rem; }
+    .s-label { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.4rem; }
+    .s-label::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+    .s-label-text {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+    }
+    .s-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 300; line-height: 1.15;
+      color: var(--navy-dk); margin-bottom: 1.4rem;
+    }
+    .s-title em { font-style: italic; }
+    .s-title.light { color: var(--white); }
+    .s-title.light em { color: var(--gold-lt); }
+    .s-body { font-size: 0.98rem; font-weight: 300; line-height: 1.85; color: #5a5a5a; }
+    .s-body.light { color: rgba(255,255,255,0.58); }
+
+    /* ── PROBLEM ───────────────────────────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: start; }
+    .problem-right { padding-top: 1rem; }
+    .pain-list { list-style: none; margin-top: 2rem; }
+    .pain-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.3rem 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.95rem; font-weight: 300; line-height: 1.6;
+      color: #4a4a4a;
+    }
+    .pain-item:last-child { border-bottom: none; }
+    .pain-num {
+      font-family: var(--serif);
+      font-size: 1.5rem; font-weight: 300;
+      color: var(--gold); line-height: 1; flex-shrink: 0;
+      min-width: 32px;
+    }
+    .stats-band {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+      margin-top: 0;
+      background: var(--rule);
+    }
+    .stat-cell { background: var(--white); padding: 2rem 1.8rem; }
+    .stat-n {
+      font-family: var(--serif); font-size: 2.4rem; font-weight: 300;
+      color: var(--navy); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .stat-l {
+      font-size: 0.65rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray);
+    }
+
+    /* ── DESK CAPABILITIES (4-card grid) ─────────────────────────────────── */
+    #desk { background: var(--off); }
+    .desk-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 5rem; align-items: end; }
+    .desk-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+      background: var(--rule);
+    }
+    .desk-card {
+      background: var(--white);
+      padding: 3rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .desk-card:hover { transform: translateY(-3px); }
+    .desk-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 100%; height: 2px; background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .desk-card:hover::after { transform: scaleX(1); }
+    .desk-num {
+      font-family: var(--serif); font-size: 3rem; font-weight: 300;
+      color: var(--rule); line-height: 1; margin-bottom: 1.5rem;
+    }
+    .desk-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+    .desk-title {
+      font-family: var(--serif); font-size: 1.45rem; font-weight: 400;
+      color: var(--navy-dk); margin-bottom: 0.9rem; line-height: 1.2;
+    }
+    .desk-body { font-size: 0.88rem; font-weight: 300; line-height: 1.75; color: #666; }
+    .desk-detail {
+      margin-top: 1.4rem; padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.78rem; font-weight: 400; color: var(--navy);
+      line-height: 1.65;
+    }
+    .desk-detail strong {
+      display: block;
+      font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+
+    /* ── PROCESS (dark) ────────────────────────────────────────────────────── */
+    #process { background: var(--navy-xd); }
+    .process-layout { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .process-step {
+      background: rgba(184,152,106,0.04);
+      border: 1px solid rgba(184,152,106,0.15);
+      border-radius: 3px;
+      padding: 2.2rem;
+      position: relative;
+    }
+    .process-step::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 40px; height: 2px; background: var(--gold);
+    }
+    .process-num {
+      font-family: var(--serif); font-size: 0.7rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.16em; margin-bottom: 1rem;
+      padding-top: 1rem;
+    }
+    .process-title {
+      font-family: var(--serif); font-size: 1.25rem; font-weight: 400;
+      color: var(--white); margin-bottom: 0.7rem; line-height: 1.25;
+    }
+    .process-body {
+      font-size: 0.82rem; font-weight: 300; line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── WHO IT'S FOR ──────────────────────────────────────────────────────── */
+    #fit { background: var(--white); }
+    .fit-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: start; }
+    .fit-callout {
+      background: var(--off);
+      border-left: 3px solid var(--gold);
+      padding: 2rem 2.2rem;
+      margin-top: 2rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .fit-callout-title {
+      font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .fit-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .fit-tag {
+      font-size: 0.75rem; font-weight: 400; color: var(--navy);
+      background: var(--white); border: 1px solid var(--rule);
+      padding: 0.35rem 0.85rem; border-radius: 100px;
+    }
+    .fit-list { list-style: none; margin-top: 1.5rem; }
+    .fit-bullet {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.92rem; font-weight: 300; color: #555; line-height: 1.6;
+    }
+    .fit-bullet::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; margin-top: 8px;
+    }
+
+    /* ── CONTACT ───────────────────────────────────────────────────────────── */
+    #contact { background: var(--off); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 7rem; align-items: start; }
+    .contact-detail { margin-bottom: 2rem; }
+    .contact-detail-label {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .contact-detail-value { font-size: 0.95rem; font-weight: 300; color: var(--text); line-height: 1.65; }
+    .contact-detail-value a { color: var(--navy); text-decoration: none; transition: color 0.2s; }
+    .contact-detail-value a:hover { color: var(--gold); }
+    .contact-form-wrap {
+      background: var(--white);
+      padding: 3.2rem; border-radius: 3px;
+      box-shadow: 0 8px 48px rgba(15,36,72,0.07);
+    }
+    .contact-form-wrap h3 {
+      font-family: var(--serif); font-size: 2rem; font-weight: 300;
+      color: var(--navy-dk); margin-bottom: 0.4rem;
+    }
+    .contact-form-wrap p {
+      font-size: 0.88rem; font-weight: 300; color: #999; margin-bottom: 2.2rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block; font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: #aaa; margin-bottom: 0.45rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 0.82rem 1rem;
+      border: 1px solid #dedad2; border-radius: 2px;
+      font-family: var(--sans); font-size: 0.88rem; font-weight: 300;
+      color: var(--text); background: var(--white);
+      outline: none; transition: border-color 0.2s; appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%; padding: 1rem;
+      background: var(--navy-dk); color: var(--white);
+      border: none; border-radius: 2px;
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s; margin-top: 0.4rem;
+    }
+    .form-submit:hover { background: var(--navy); }
+    #formStatus {
+      margin-top: 1rem; padding: 0.75rem 1rem;
+      border-radius: 2px;
+      font-size: 0.85rem; font-weight: 300; display: none;
+    }
+    #formStatus.success { display: block; background: #eef7f2; color: #1e6640; border: 1px solid #b2ddc4; }
+    #formStatus.error   { display: block; background: #fdf0f0; color: #8b2020; border: 1px solid #f0c0c0; }
+
+    /* ── DISCLOSURE ────────────────────────────────────────────────────────── */
+    .disclosure-band { background: var(--off); padding: 3rem 0; border-top: 1px solid var(--rule); }
+    .disclosure-text {
+      max-width: 1000px; margin: 0 auto; padding: 0 3.5rem;
+      font-size: 0.78rem; font-weight: 300; line-height: 1.75;
+      color: #888; font-style: italic;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy-xd); padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(184,152,106,0.15);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3.5rem; }
+    .footer-mark {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--gold); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 300;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-desc {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 280px;
+    }
+    .footer-col-h {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-ul { list-style: none; }
+    .footer-ul li { margin-bottom: 0.6rem; }
+    .footer-ul a {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-ul a:hover { color: var(--gold-lt); }
+    .footer-contact-item { margin-bottom: 0.9rem; }
+    .footer-contact-l {
+      font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.28); margin-bottom: 0.2rem;
+    }
+    .footer-contact-v { font-size: 0.82rem; font-weight: 300; color: rgba(255,255,255,0.48); }
+    .footer-contact-v a { color: rgba(255,255,255,0.48); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-v a:hover { color: var(--gold-lt); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.8rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-copy { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv a { color: var(--gold); text-decoration: none; }
+
+    /* ── ANIMATIONS ────────────────────────────────────────────────────────── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { display: none; }
+      .problem-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .desk-header { grid-template-columns: 1fr; }
+      .desk-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .fit-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      nav.scrolled { padding: 0.9rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: var(--navy-xd);
+        justify-content: center; align-items: center;
+        gap: 2.2rem; z-index: 199;
+      }
+      .nav-links.open a { font-size: 1rem; }
+      .nav-toggle { display: flex; }
+      .hero-content { padding: 6.5rem 1.5rem 4rem; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
+      .stats-band { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .disclosure-text { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-mark">E</div>
+    <div class="nav-name">
+      Equitable Capital
+      <span>Advisors</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#desk">The Desk</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#fit">Who It's For</a></li>
+    <li><a href="#contact" class="nav-cta">Request Discovery</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="hero-tag-text">The AI Client & Partner Development Desk</span>
+      </div>
+      <h1 class="hero-h1">
+        A repeatable system for winning <em>the right clients and partners.</em>
+      </h1>
+      <p class="hero-sub">
+        Strategic introductions, referral partner development, and high-value relationships — engineered as a system, not left to chance. Built on Andrew Glaze's curated network and AI-enabled relationship intelligence.
+      </p>
+      <div class="hero-btns">
+        <a href="#desk" class="btn-gold" onclick="vvTrack && vvTrack('cta_click',{target:'explore_desk'})">Explore the Desk ↓</a>
+        <a href="#contact" class="btn-ghost" onclick="vvTrack && vvTrack('cta_click',{target:'request_discovery'})">Request Discovery</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-outcomes">
+        <div class="hero-outcomes-title">What the Desk Delivers</div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🎯</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Qualified Pipeline</div>
+            <div class="outcome-desc">A defined target list of clients, partners, and allocators worth pursuing — not a generic prospect dump.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🤝</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Warm Introductions</div>
+            <div class="outcome-desc">Pathways from your existing network and ours into decision-makers, mapped and sequenced.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">⚙</div>
+          <div class="outcome-text">
+            <div class="outcome-title">The Operating Cadence</div>
+            <div class="outcome-desc">Weekly review of activity, response, and pipeline movement — a system, not a campaign.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">📈</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Measurable Outcomes</div>
+            <div class="outcome-desc">Tracked from first introduction through closed engagement. You see what's working.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">The Problem</span></div>
+        <h2 class="s-title">Most firms win clients<br><em>by accident.</em></h2>
+        <p class="s-body">
+          Founder-led firms — boutiques, advisors, asset managers, fund GPs — usually grow on a mix of luck, referrals from a small circle, and conferences. It works until it doesn't. Then revenue depends on a handful of relationships, growth stalls, and there's no system to restart it.
+        </p>
+        <p class="s-body" style="margin-top:1.2rem;">
+          The AI Client & Partner Development Desk replaces that fragility with a disciplined operating cadence: a defined target universe, a sequenced introduction strategy, and weekly measurable progress.
+        </p>
+        <div class="stats-band" style="margin-top:3rem;">
+          <div class="stat-cell">
+            <div class="stat-n">90%</div>
+            <div class="stat-l">Of Firms Lack a Repeatable BD System</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-n">5×</div>
+            <div class="stat-l">Higher Close Rate on Warm Intros</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-n">12mo+</div>
+            <div class="stat-l">Avg Sales Cycle Without a System</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-n">1</div>
+            <div class="stat-l">Senior Operator Running the Desk</div>
+          </div>
+        </div>
+      </div>
+      <div class="problem-right reveal">
+        <div class="s-label"><span class="s-label-text">What This Solves</span></div>
+        <h2 class="s-title">Five problems<br><em>founder-led firms recognize immediately.</em></h2>
+        <ul class="pain-list">
+          <li class="pain-item">
+            <div class="pain-num">01</div>
+            <div>"Our pipeline depends on the founder's calendar. When she's heads-down on delivery, growth stops."</div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-num">02</div>
+            <div>"We know who we should be reaching — we just don't have a system to actually reach them consistently."</div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-num">03</div>
+            <div>"We hired a BD person. They were great at activity, terrible at outcomes."</div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-num">04</div>
+            <div>"Our existing network is bigger than we use. We just don't have the cadence to keep it warm."</div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-num">05</div>
+            <div>"We can't tell whether marketing or referrals or events are actually working — we just keep doing all of them."</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE DESK / 4 CAPABILITIES -->
+<section id="desk">
+  <div class="container">
+    <div class="desk-header">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">The Desk</span></div>
+        <h2 class="s-title">Four functions.<br><em>One senior operator.</em></h2>
+      </div>
+      <div class="reveal">
+        <p class="s-body">
+          The AI Client & Partner Development Desk is a managed function for founder-led firms — combining senior judgment, AI-enabled relationship intelligence, and the disciplined operating cadence most firms know they need but can't build internally.
+        </p>
+      </div>
+    </div>
+    <div class="desk-grid">
+      <div class="desk-card reveal">
+        <div class="desk-num">01</div>
+        <div class="desk-icon">🗺</div>
+        <div class="desk-title">Target Universe Mapping</div>
+        <p class="desk-body">
+          We define the specific clients, referral partners, and strategic relationships worth pursuing — with named individuals, ranked by fit and warmth, mapped to your network's existing pathways in.
+        </p>
+        <div class="desk-detail">
+          <strong>Output</strong>
+          A living target list of 100–500 named people with relationship scoring, intent signals, and intro pathways.
+        </div>
+      </div>
+      <div class="desk-card reveal">
+        <div class="desk-num">02</div>
+        <div class="desk-icon">🤝</div>
+        <div class="desk-title">Introduction Strategy & Execution</div>
+        <p class="desk-body">
+          We sequence and execute the introductions — warm where possible, professionally direct where not. Every touch is logged, every response tracked, every follow-up scheduled.
+        </p>
+        <div class="desk-detail">
+          <strong>Output</strong>
+          Weekly outreach cadence with sequenced touches across email, LinkedIn, phone, and in-person events.
+        </div>
+      </div>
+      <div class="desk-card reveal">
+        <div class="desk-num">03</div>
+        <div class="desk-icon">⚙</div>
+        <div class="desk-title">AI Relationship Intelligence</div>
+        <p class="desk-body">
+          Victory Vision powers the desk: AI scoring of contacts and intent signals, automated journey logging, content drafting tuned to each prospect, and real-time pipeline analytics.
+        </p>
+        <div class="desk-detail">
+          <strong>Output</strong>
+          Continuous prioritization of who to call this week and what to say — based on actual behavior data, not assumptions.
+        </div>
+      </div>
+      <div class="desk-card reveal">
+        <div class="desk-num">04</div>
+        <div class="desk-icon">📊</div>
+        <div class="desk-title">Operating Cadence & Review</div>
+        <p class="desk-body">
+          Weekly 60-minute review with you. What moved, what didn't, what's on deck, where capital and attention should go. No surprises. No black-box agencies. You see the desk every week.
+        </p>
+        <div class="desk-detail">
+          <strong>Output</strong>
+          A documented BD function with measurable forward progress — pipeline value, response rate, conversion rate, all visible.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS / PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="reveal" style="max-width:700px;">
+      <div class="s-label"><span class="s-label-text">How It Works</span></div>
+      <h2 class="s-title light">From engagement to<br><em>operating cadence in 30 days.</em></h2>
+      <p class="s-body light">
+        A defined 30-day stand-up, then a steady-state operating relationship measured by pipeline movement, not activity volume.
+      </p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-num">Week 01</div>
+        <div class="process-title">Discovery & Scope</div>
+        <p class="process-body">Define what a great client, partner, and strategic relationship looks like for your firm. Audit existing network and pipeline. Confirm the goal.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Week 02</div>
+        <div class="process-title">Target Universe Build</div>
+        <p class="process-body">Build the named target list, scored and ranked. Map your existing network's pathways into each target. Confirm the first 50 priority outreach names.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Week 03</div>
+        <div class="process-title">Cadence Launch</div>
+        <p class="process-body">Begin sequenced outreach. AI-enabled content drafting and intent scoring active. First introductions and meetings booked.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Wk 4+</div>
+        <div class="process-title">Operating Cadence</div>
+        <p class="process-body">Weekly review. Pipeline movement tracked and reported. Target universe refreshed quarterly. Cadence tuned to what's converting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="fit">
+  <div class="container">
+    <div class="fit-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Who It's For</span></div>
+        <h2 class="s-title">Founder-led firms<br><em>that need a real BD function.</em></h2>
+        <p class="s-body">
+          The Desk works best for firms that have proven client value but haven't built a repeatable client-acquisition or partner-development system. The retainer model is designed for founders who want senior judgment running BD — not a junior hire learning on their dime.
+        </p>
+        <div class="fit-callout">
+          <div class="fit-callout-title">Best-Fit Firm Profiles</div>
+          <div class="fit-tags">
+            <span class="fit-tag">Boutique RIAs / Wealth Advisors</span>
+            <span class="fit-tag">Emerging Asset Managers</span>
+            <span class="fit-tag">Founder-Owned Consultancies</span>
+            <span class="fit-tag">M&A Advisory Boutiques</span>
+            <span class="fit-tag">Private Credit / Direct Lending Funds</span>
+            <span class="fit-tag">Real Estate Operators</span>
+            <span class="fit-tag">Family Offices Seeking Co-Invest Flow</span>
+            <span class="fit-tag">Veteran-Owned Specialty Firms</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Strong Fit Signals</span></div>
+        <h2 class="s-title">You'll get value here if<br><em>most of these are true.</em></h2>
+        <ul class="fit-list">
+          <li class="fit-bullet">You're founder-led and your growth currently depends on your personal time</li>
+          <li class="fit-bullet">Your network is larger than you systematically use</li>
+          <li class="fit-bullet">Your buyers value relationship and trust over volume marketing</li>
+          <li class="fit-bullet">Each client is worth six figures or more in lifetime value</li>
+          <li class="fit-bullet">You've tried hiring a BD person and the activity didn't convert</li>
+          <li class="fit-bullet">You want senior judgment running outreach, not a junior hire</li>
+          <li class="fit-bullet">You'd rather pay a retainer for outcomes than build the function internally</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Discovery Conversation</span></div>
+        <h2 class="s-title">A 30-minute call<br><em>to assess fit.</em></h2>
+        <p class="s-body" style="margin-bottom:3rem;">
+          We start with a 30-minute conversation. We listen to where your firm is, what a great client or partner looks like for you, and where the bottleneck is. If there's a fit, we propose how the Desk would work for you — scope, fee, deliverables, in writing.
+        </p>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value">
+            <a href="mailto:glaze@equitablecap.com" onclick="vvTrack && vvTrack('email_click',{source:'strategic_intros'})">glaze@equitablecap.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">LinkedIn</div>
+          <div class="contact-detail-value">
+            <a href="https://linkedin.com/in/aglaze" target="_blank" rel="noopener" onclick="vvTrack && vvTrack('linkedin_click',{source:'strategic_intros'})">linkedin.com/in/aglaze</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Engagement Model</div>
+          <div class="contact-detail-value">
+            Monthly retainer, scoped at engagement. Fee disclosed in writing before any commitment.
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <h3>Request a Discovery Call</h3>
+        <p>Tell us briefly about your firm. We respond within one business day.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Firm Name</label>
+            <input type="text" name="company">
+          </div>
+          <div class="form-group">
+            <label>What kind of firm are you?</label>
+            <select name="firm_type">
+              <option value="">Select one</option>
+              <option value="ria_wealth">RIA / Wealth Advisor</option>
+              <option value="asset_manager">Emerging Asset Manager / Fund GP</option>
+              <option value="consultancy">Consultancy / Advisory Boutique</option>
+              <option value="ma_advisory">M&A Advisory Boutique</option>
+              <option value="private_credit">Private Credit / Direct Lender</option>
+              <option value="re_operator">Real Estate Operator / Sponsor</option>
+              <option value="family_office">Family Office</option>
+              <option value="specialty">Veteran-Owned / Specialty Firm</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>What does a great client or partner look like for you?</label>
+            <textarea name="message" placeholder="Describe the kind of client, referral partner, or strategic relationship that would move the needle for your firm."></textarea>
+          </div>
+          <input type="hidden" name="source" value="equitablecapitaladvisors.com/strategic-introductions">
+          <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+          <button type="submit" class="form-submit">Request Discovery →</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE DISCLOSURE -->
+<div class="disclosure-band">
+  <div class="disclosure-text">
+    This page is provided for informational purposes to professional contacts of Equitable Capital Advisors. It does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument, nor does it constitute investment, legal, tax, or accounting advice. The AI Client & Partner Development Desk is an advisory and business development service. Where engagements include capital raising or M&A advisory components, those activities are conducted through GT Securities, Inc., a registered broker-dealer and member of FINRA and SIPC, pursuant to a separate engagement letter. Where engagements relate to insurance or risk matters, Equitable Capital Advisors is a Nevada-licensed insurance agency that refers such work to NFP, an Aon company, and its licensed affiliates. All engagement terms and fees are defined in a written engagement letter executed prior to any work.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-mark">E</div>
+        <p class="footer-desc">Strategic introductions, referral partner development, and high-value relationships engineered as a repeatable system — for founder-led firms.</p>
+      </div>
+      <div>
+        <div class="footer-col-h">The Desk</div>
+        <ul class="footer-ul">
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#desk">Four Functions</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#fit">Who It's For</a></li>
+          <li><a href="#contact">Discovery Call</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Other Services</div>
+        <ul class="footer-ul">
+          <li><a href="https://equitablecapitaladvisors.com/partners">Capital & M&A (via GT Securities)</a></li>
+          <li><a href="https://equitablecapitaladvisors.com">Equitable Capital Home</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">Email</div>
+          <div class="footer-contact-v"><a href="mailto:glaze@equitablecap.com">glaze@equitablecap.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">LinkedIn</div>
+          <div class="footer-contact-v"><a href="https://linkedin.com/in/aglaze" target="_blank" rel="noopener">linkedin.com/in/aglaze</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Equitable Capital Advisors. All Rights Reserved. Securities offered through GT Securities, Inc., member FINRA, SIPC.</div>
+      <div class="footer-vv">Powered by <a href="https://www.victoryvision.app" target="_blank" rel="noopener">Victory Vision AI</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ============ NAV ============
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // ============ REVEAL ON SCROLL ============
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 90);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => obs.observe(el));
+
+  // ============ ANALYTICS TRACKING SNIPPET ============
+  // Fires to /webhook/pages/track once Fix #4 lands; gracefully no-ops if endpoint isn't live yet
+  (function(){
+    var PAGE_SLUG = "strategic-introductions";
+    var CUSTOMER_ID = "glaze@equitablecap.com";
+    var TRACK = "https://victoryvision.app.n8n.cloud/webhook/pages/track";
+
+    function sid() {
+      var m = document.cookie.match(/vv_sid=([^;]+)/);
+      if (m) return m[1];
+      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      document.cookie = "vv_sid=" + v + "; path=/; max-age=" + (90*86400) + "; SameSite=Lax";
+      return v;
+    }
+    function source() {
+      var p = new URLSearchParams(location.search);
+      if (p.get("utm_source")) {
+        var s = p.get("utm_source").toLowerCase();
+        if (/email|newsletter/.test(s)) return "email";
+        if (/linkedin|twitter|x|facebook/.test(s)) return "social";
+        if (/ad|ppc|cpc/.test(s)) return "ads";
+        return s;
+      }
+      if (p.get("gclid") || p.get("msclkid") || p.get("li_fat_id")) return "ads";
+      var r = document.referrer || "";
+      if (/mail\.|gmail|outlook|yahoo/i.test(r)) return "email";
+      if (/linkedin|twitter|x\.com|facebook|instagram/i.test(r)) return "social";
+      if (!r || r.indexOf(location.hostname) === 0) return "direct";
+      return "unknown";
+    }
+    function tr(eventType, extra) {
+      var body = {
+        page_slug: PAGE_SLUG,
+        customer_id: CUSTOMER_ID,
+        event_type: eventType,
+        source: source(),
+        session_id: sid(),
+        metadata: Object.assign({
+          path: location.pathname,
+          referrer: document.referrer,
+          ua: navigator.userAgent
+        }, extra || {})
+      };
+      if (extra && extra.amount !== undefined) body.amount = extra.amount;
+      if (extra && extra.target) body.click_target = extra.target;
+      fetch(TRACK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        keepalive: true
+      }).catch(function(){});
+
+      // Mirror key conversions into LinkedIn + Google + Microsoft for ad optimization
+      try {
+        if (eventType === 'form_submit') {
+          if (typeof gtag === 'function') gtag('event', 'strategic_intros_form_submit');
+          if (window.uetq) window.uetq.push('event', 'strategic_intros_form_submit', {});
+          if (window.lintrk) window.lintrk('track', { conversion_id: 22500001 });
+        } else if (eventType === 'cta_click') {
+          if (typeof gtag === 'function') gtag('event', 'strategic_intros_cta_click', { target: (extra && extra.target) || '' });
+        }
+      } catch(e){}
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function(){ tr("visit"); });
+    } else {
+      tr("visit");
+    }
+    document.addEventListener("click", function(e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a || !a.href) return;
+      var d = a.href;
+      var isOutbound = a.host && a.host !== location.host;
+      var isMailto = d.indexOf("mailto:") === 0;
+      var isTel = d.indexOf("tel:") === 0;
+      if (isOutbound || isMailto || isTel) tr("click", { target: d });
+    }, true);
+    window.vvTrack = tr;
+  })();
+
+  // ============ CONTACT FORM ============
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      });
+      if (res.ok) {
+        status.className = 'success';
+        status.textContent = 'Thank you — we will be in touch within one business day.';
+        form.reset();
+        if (window.vvTrack) window.vvTrack('form_submit', { form: 'strategic_intros_discovery' });
+      } else { throw new Error(); }
+    } catch {
+      status.className = 'error';
+      status.textContent = 'Something went wrong. Please email us at glaze@equitablecap.com.';
+    } finally {
+      btn.textContent = 'Request Discovery →';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
