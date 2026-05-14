@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equitable Capital × GT Securities — Capital, M&A, and Strategic Partnerships</title>
+  <meta name="description" content="Equitable Capital Advisors pairs Andrew Glaze's curated network with the institutional reach of GT Securities — 260+ bankers and over $50 billion in transactions — for founders, GPs, and operating CEOs.">
+  <meta property="og:title" content="Equitable Capital × GT Securities">
+  <meta property="og:description" content="Your relationships, with the platform behind them. Capital, M&A, and strategic partnerships for founders and General Partners.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='4' fill='%231a3a6b'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='%23b8986a' font-family='Georgia'>E</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:    #1a3a6b;
+      --navy-dk: #0f2448;
+      --navy-xd: #081630;
+      --gold:    #b8986a;
+      --gold-lt: #d4b896;
+      --gold-dk: #8a6e42;
+      --white:   #ffffff;
+      --off:     #f8f7f4;
+      --rule:    #e6e2da;
+      --gray:    #8a8f9a;
+      --text:    #252525;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      background: rgba(8,22,48,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,152,106,0.18);
+      transition: padding 0.35s;
+    }
+    nav.scrolled { padding: 1rem 3.5rem; }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.9rem;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .nav-mark {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--gold); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 1.35rem; font-weight: 300;
+      color: var(--gold); letter-spacing: -1px;
+    }
+    .nav-name {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+      color: var(--white); letter-spacing: 0.02em; line-height: 1.2;
+    }
+    .nav-name span {
+      display: block;
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 300;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-top: 2px;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.72); text-decoration: none;
+      font-size: 0.7rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta {
+      border: 1px solid var(--gold) !important;
+      color: var(--gold) !important;
+      padding: 0.5rem 1.3rem; border-radius: 2px;
+      transition: background 0.2s, color 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy-xd) !important; }
+
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 201; }
+    .nav-toggle span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--white); transition: all 0.3s;
+    }
+
+    /* ── HERO ──────────────────────────────────────────────────────────────── */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: var(--navy-xd);
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(184,152,106,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,152,106,0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .hero-glow {
+      position: absolute; top: -200px; left: -200px;
+      width: 800px; height: 800px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,58,107,0.5) 0%, transparent 70%);
+    }
+    .hero-glow-2 {
+      position: absolute; bottom: -150px; right: -100px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,152,106,0.08) 0%, transparent 70%);
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+      padding: 9rem 3.5rem 5rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 2rem;
+      opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .hero-tag-text {
+      font-size: 0.62rem; font-weight: 400;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300; line-height: 1.07;
+      color: var(--white); margin-bottom: 2rem;
+      opacity: 0; animation: fadeUp 0.9s 0.35s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--gold-lt); }
+
+    .hero-sub {
+      font-size: 1rem; font-weight: 300; line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px; margin-bottom: 2.8rem;
+      opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.65s forwards; }
+
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: var(--navy-xd);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      font-size: 0.7rem; font-weight: 400;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+    .hero-right { opacity: 0; animation: fadeIn 1.1s 0.7s forwards; }
+
+    .hero-outcomes {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(184,152,106,0.2);
+      border-radius: 4px;
+      padding: 2.8rem;
+    }
+    .hero-outcomes-title {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(184,152,106,0.15);
+    }
+    .outcome-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.4rem; padding-bottom: 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .outcome-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .outcome-icon {
+      width: 32px; height: 32px; border-radius: 2px;
+      background: rgba(184,152,106,0.12);
+      border: 1px solid rgba(184,152,106,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .outcome-title {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
+      color: var(--white); margin-bottom: 0.25rem;
+    }
+    .outcome-desc {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.45); line-height: 1.6;
+    }
+
+    /* ── SECTION FOUNDATIONS ───────────────────────────────────────────────── */
+    section { padding: 7rem 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 3.5rem; }
+
+    .s-label { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.4rem; }
+    .s-label::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+    .s-label-text {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .s-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 300; line-height: 1.15;
+      color: var(--navy-dk); margin-bottom: 1.4rem;
+    }
+    .s-title em { font-style: italic; }
+    .s-title.light { color: var(--white); }
+    .s-title.light em { color: var(--gold-lt); }
+
+    .s-body { font-size: 0.98rem; font-weight: 300; line-height: 1.85; color: #5a5a5a; }
+    .s-body.light { color: rgba(255,255,255,0.58); }
+
+    /* ── ABOUT ─────────────────────────────────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: start; }
+    .about-right { padding-top: 1rem; }
+
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+      margin-top: 3.5rem; background: var(--rule);
+    }
+    .about-stat { background: var(--white); padding: 2rem 1.8rem; }
+    .stat-n {
+      font-family: var(--serif); font-size: 2.4rem; font-weight: 300;
+      color: var(--navy); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .stat-l { font-size: 0.65rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+
+    .icp-callout {
+      background: var(--off);
+      border-left: 3px solid var(--gold);
+      padding: 2rem 2.2rem;
+      margin-top: 2.5rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .icp-callout-title {
+      font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .icp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .icp-tag {
+      font-size: 0.75rem; font-weight: 400; color: var(--navy);
+      background: var(--white); border: 1px solid var(--rule);
+      padding: 0.35rem 0.85rem; border-radius: 100px;
+    }
+
+    /* ── CAPABILITIES ──────────────────────────────────────────────────────── */
+    #capabilities { background: var(--off); }
+    .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 5rem; align-items: end; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
+    .service-card {
+      background: var(--white);
+      padding: 3rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-3px); }
+    .service-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 100%; height: 2px; background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-num {
+      font-family: var(--serif); font-size: 3rem; font-weight: 300;
+      color: var(--rule); line-height: 1; margin-bottom: 1.5rem;
+    }
+    .service-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+    .service-title {
+      font-family: var(--serif); font-size: 1.45rem; font-weight: 400;
+      color: var(--navy-dk); margin-bottom: 0.9rem; line-height: 1.2;
+    }
+    .service-body { font-size: 0.88rem; font-weight: 300; line-height: 1.75; color: #666; }
+    .service-fit {
+      margin-top: 1.4rem; padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.75rem; font-weight: 400; color: var(--navy);
+    }
+    .service-fit strong {
+      display: block;
+      font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+
+    /* ── GT SECURITIES ─────────────────────────────────────────────────────── */
+    #platform { background: var(--navy-xd); }
+    .platform-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 7rem; align-items: start; }
+    .platform-fit {
+      background: rgba(184,152,106,0.07);
+      border: 1px solid rgba(184,152,106,0.18);
+      border-radius: 3px;
+      padding: 2.8rem;
+    }
+    .platform-fit-title {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
+      color: var(--white); margin-bottom: 1.8rem; line-height: 1.3;
+    }
+    .platform-fit-title em { font-style: italic; color: var(--gold-lt); }
+    .fit-items { list-style: none; }
+    .fit-item {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.88rem; font-weight: 300;
+      color: rgba(255,255,255,0.65); line-height: 1.6;
+    }
+    .fit-item::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; margin-top: 7px;
+    }
+
+    /* ── PROCESS ───────────────────────────────────────────────────────────── */
+    #process { background: var(--white); }
+    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 4rem; }
+    .approach-step { position: relative; padding-top: 2rem; }
+    .approach-step::before { content: ''; position: absolute; top: 0; left: 0; width: 40px; height: 2px; background: var(--gold); }
+    .approach-num {
+      font-family: var(--serif); font-size: 0.72rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.16em; margin-bottom: 1rem;
+    }
+    .approach-title {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+      color: var(--navy-dk); margin-bottom: 0.8rem; line-height: 1.25;
+    }
+    .approach-body { font-size: 0.88rem; font-weight: 300; line-height: 1.75; color: #666; }
+
+    /* ── CONTACT ───────────────────────────────────────────────────────────── */
+    #contact { background: var(--off); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 7rem; align-items: start; }
+
+    .contact-detail { margin-bottom: 2rem; }
+    .contact-detail-label {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .contact-detail-value { font-size: 0.95rem; font-weight: 300; color: var(--text); line-height: 1.65; }
+    .contact-detail-value a { color: var(--navy); text-decoration: none; transition: color 0.2s; }
+    .contact-detail-value a:hover { color: var(--gold); }
+
+    .contact-form-wrap {
+      background: var(--white);
+      padding: 3.2rem;
+      border-radius: 3px;
+      box-shadow: 0 8px 48px rgba(15,36,72,0.07);
+    }
+    .contact-form-wrap h3 {
+      font-family: var(--serif); font-size: 2rem; font-weight: 300;
+      color: var(--navy-dk); margin-bottom: 0.4rem;
+    }
+    .contact-form-wrap p {
+      font-size: 0.88rem; font-weight: 300; color: #999; margin-bottom: 2.2rem;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block; font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: #aaa; margin-bottom: 0.45rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 0.82rem 1rem;
+      border: 1px solid #dedad2; border-radius: 2px;
+      font-family: var(--sans); font-size: 0.88rem; font-weight: 300;
+      color: var(--text); background: var(--white);
+      outline: none; transition: border-color 0.2s; appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%; padding: 1rem;
+      background: var(--navy-dk); color: var(--white);
+      border: none; border-radius: 2px;
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s; margin-top: 0.4rem;
+    }
+    .form-submit:hover { background: var(--navy); }
+
+    #formStatus {
+      margin-top: 1rem; padding: 0.75rem 1rem;
+      border-radius: 2px;
+      font-size: 0.85rem; font-weight: 300; display: none;
+    }
+    #formStatus.success { display: block; background: #eef7f2; color: #1e6640; border: 1px solid #b2ddc4; }
+    #formStatus.error   { display: block; background: #fdf0f0; color: #8b2020; border: 1px solid #f0c0c0; }
+
+    /* ── DISCLOSURE ────────────────────────────────────────────────────────── */
+    .disclosure-band {
+      background: var(--off);
+      padding: 3rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    .disclosure-text {
+      max-width: 1000px; margin: 0 auto;
+      padding: 0 3.5rem;
+      font-size: 0.78rem; font-weight: 300; line-height: 1.75;
+      color: #888; font-style: italic;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy-xd);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(184,152,106,0.15);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3.5rem; }
+    .footer-mark {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--gold); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 300;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-desc {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.75; max-width: 280px;
+    }
+    .footer-col-h {
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-ul { list-style: none; }
+    .footer-ul li { margin-bottom: 0.6rem; }
+    .footer-ul a {
+      font-size: 0.82rem; font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-ul a:hover { color: var(--gold-lt); }
+
+    .footer-contact-item { margin-bottom: 0.9rem; }
+    .footer-contact-l {
+      font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.28); margin-bottom: 0.2rem;
+    }
+    .footer-contact-v { font-size: 0.82rem; font-weight: 300; color: rgba(255,255,255,0.48); }
+    .footer-contact-v a { color: rgba(255,255,255,0.48); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-v a:hover { color: var(--gold-lt); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.8rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-copy { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv a { color: var(--gold); text-decoration: none; }
+
+    /* ── ANIMATIONS ────────────────────────────────────────────────────────── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { display: none; }
+      .about-layout { grid-template-columns: 1fr; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .platform-layout { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      nav.scrolled { padding: 0.9rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: var(--navy-xd);
+        justify-content: center; align-items: center;
+        gap: 2.2rem; z-index: 199;
+      }
+      .nav-links.open a { font-size: 1rem; }
+      .nav-toggle { display: flex; }
+      .hero-content { padding: 6.5rem 1.5rem 4rem; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .approach-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .disclosure-text { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-mark">E</div>
+    <div class="nav-name">
+      Equitable Capital
+      <span>Advisors</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#platform">GT Securities</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact" class="nav-cta">Request Conversation</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="hero-tag-text">Capital · M&amp;A · Strategic Partnerships</span>
+      </div>
+      <h1 class="hero-h1">
+        Your relationships, with the <em>platform behind them.</em>
+      </h1>
+      <p class="hero-sub">
+        Equitable Capital Advisors pairs Andrew Glaze's curated network with the institutional reach of GT Securities — 260+ bankers and over $50 billion in transactions executed — to deliver capital, M&amp;A advisory, and strategic introductions to founders and General Partners who value trust and execution in equal measure.
+      </p>
+      <div class="hero-btns">
+        <a href="#capabilities" class="btn-gold">Explore Capabilities ↓</a>
+        <a href="#contact" class="btn-ghost">Request a Conversation</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-outcomes">
+        <div class="hero-outcomes-title">What we deliver</div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🏛</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Institutional Capital</div>
+            <div class="outcome-desc">LP capital, direct lending, and growth equity through GT Securities' institutional relationships.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🔄</div>
+          <div class="outcome-text">
+            <div class="outcome-title">M&amp;A Execution</div>
+            <div class="outcome-desc">Sellside, buyside, and recapitalization advisory backed by the platform's $50B+ transaction volume.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">🤝</div>
+          <div class="outcome-text">
+            <div class="outcome-title">Strategic Introductions</div>
+            <div class="outcome-desc">Joint-venture partners, customers, and board talent across Andrew's personal network.</div>
+          </div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">⚙</div>
+          <div class="outcome-text">
+            <div class="outcome-title">One Accountable Relationship</div>
+            <div class="outcome-desc">Three capabilities under one engagement, with one senior point of contact.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Who We Are</span></div>
+        <h2 class="s-title">The relationships you trust, the<br><em>platform you need.</em></h2>
+        <p class="s-body">
+          Equitable Capital Advisors is a placement and capital advisory firm founded by Andrew Glaze. We help founders, General Partners, and operating CEOs access institutional capital, execute M&amp;A, and forge the strategic partnerships that compound enterprise value.
+        </p>
+        <p class="s-body" style="margin-top:1.2rem;">
+          We operate as one of several specialty practices under GT Securities — a registered broker-dealer with the platform infrastructure of a full-service investment bank and the senior attention of a boutique. The combination is rare: a relationship you actually own, with the firepower to deliver behind it.
+        </p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="stat-n">260+</div>
+            <div class="stat-l">Registered Bankers</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">$50B+</div>
+            <div class="stat-l">Platform Transactions</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">1</div>
+            <div class="stat-l">Relationship Lead</div>
+          </div>
+          <div class="about-stat">
+            <div class="stat-n">FINRA</div>
+            <div class="stat-l">SIPC Regulated</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="s-label"><span class="s-label-text">Who Benefits Most</span></div>
+        <h2 class="s-title">Best fit if you are credible but <em>under-leveraged in institutional access.</em></h2>
+        <p class="s-body" style="margin-bottom:1.5rem;">
+          Our work is most impactful for founders and GPs whose business or fund deserves more reach than they can build alone.
+        </p>
+        <div class="icp-callout">
+          <div class="icp-callout-title">Profiles We Work With</div>
+          <div class="icp-tags">
+            <span class="icp-tag">Emerging-Manager GPs</span>
+            <span class="icp-tag">Real Estate Operators</span>
+            <span class="icp-tag">Founder-Owned Operating Companies</span>
+            <span class="icp-tag">PE-Backed Portfolio Companies</span>
+            <span class="icp-tag">M&amp;A Specialists</span>
+            <span class="icp-tag">Multi-Business Operators</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="container">
+    <div class="services-header">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">What We Do</span></div>
+        <h2 class="s-title">Three capabilities.<br><em>One relationship.</em></h2>
+      </div>
+      <div class="reveal">
+        <p class="s-body">
+          Every engagement starts with understanding the outcome you need. Then we deploy the GT Securities platform behind you to deliver it. No spreading thin, no handoffs between siloed advisors.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">🏛</div>
+        <div class="service-title">Capital Raising</div>
+        <p class="service-body">Through GT Securities' institutional channels, we raise LP capital for emerging-manager funds (Fund I–III, sub-$500M), arrange direct lending for operating businesses and portfolio companies ($250K–$25M+ tickets), and introduce growth-equity capital to scaling founders.</p>
+        <div class="service-fit">
+          <strong>Best Fit</strong>
+          GPs raising a vehicle, RE operators with active deal pipelines, founder-CEOs preparing for institutional rounds.
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon">🔄</div>
+        <div class="service-title">M&amp;A Advisory</div>
+        <p class="service-body">Sellside representation for founder-owned and PE-backed companies ($10M–$500M EV). Buyside search and execution for strategic and financial acquirers. Recapitalizations and minority sales for founders seeking partial liquidity without losing control. Backed by GT Securities' $50B+ platform track record.</p>
+        <div class="service-fit">
+          <strong>Best Fit</strong>
+          Founders considering an exit, PE-backed companies preparing for transaction, strategic acquirers with defined M&amp;A theses.
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon">🤝</div>
+        <div class="service-title">Strategic Introductions</div>
+        <p class="service-body">Joint-venture partners, customers, channel relationships, and board or operating-advisor placements through Andrew's curated personal network. Not a standalone service line — this is how we deepen relationships before formal engagements arise.</p>
+        <div class="service-fit">
+          <strong>Best Fit</strong>
+          Founders building new business lines, GPs seeking portfolio-company growth levers, operators looking for capital partners or strategic LPs.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GT SECURITIES PLATFORM -->
+<section id="platform">
+  <div class="container">
+    <div class="platform-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">The Platform</span></div>
+        <h2 class="s-title light">Why the GT Securities<br><em>platform matters.</em></h2>
+        <p class="s-body light" style="margin-bottom:1.4rem;">
+          GT Securities is a registered broker-dealer and member of FINRA and SIPC. The platform combines the operational infrastructure of a full-service broker-dealer with the senior attention of a boutique firm. Over 260 registered representatives execute across geographies and verticals, supported by centralized compliance, capital markets, and back-office functions. To date, GT Securities has executed over $50 billion in transactions across private placements, M&amp;A, debt, and capital markets engagements.
+        </p>
+        <p class="s-body light">
+          When you engage Equitable Capital, you get Andrew Glaze as your relationship lead and the full GT Securities platform delivering execution behind him. Boutique-style attention. Institutional-grade infrastructure. One relationship. No handoffs.
+        </p>
+      </div>
+      <div class="platform-fit reveal">
+        <div class="platform-fit-title">Built for <em>serious counterparties.</em></div>
+        <ul class="fit-items">
+          <li class="fit-item">Registered broker-dealer, member FINRA and SIPC</li>
+          <li class="fit-item">260+ registered representatives across U.S. geographies</li>
+          <li class="fit-item">$50B+ in lifetime transaction volume on the platform</li>
+          <li class="fit-item">Full institutional infrastructure: compliance, capital markets, diligence support</li>
+          <li class="fit-item">Senior-attention model — your engagement is led by a senior banker, not a junior associate</li>
+          <li class="fit-item">All engagement terms and fees disclosed in writing prior to engagement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="reveal" style="max-width:700px;">
+      <div class="s-label"><span class="s-label-text">How We Work</span></div>
+      <h2 class="s-title">Outcomes-first.<br><em>Relationship-led.</em></h2>
+      <p class="s-body">Every engagement begins with a 30-minute conversation. No documentation, no fees, no commitment. We figure out fit before either side commits to paperwork.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 01</div>
+        <div class="approach-title">Initial Conversation</div>
+        <p class="approach-body">30 minutes by phone or video. We listen to your situation, understand what a meaningful outcome looks like, and identify which of our capabilities — if any — would be relevant.</p>
+      </div>
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 02</div>
+        <div class="approach-title">Mutual Fit Assessment</div>
+        <p class="approach-body">If there is a fit, we propose a structure — placement, M&amp;A advisory, or hybrid — and walk through the GT Securities engagement letter. Terms and fees are disclosed in writing before any retainer.</p>
+      </div>
+      <div class="approach-step reveal">
+        <div class="approach-num">Step 03</div>
+        <div class="approach-title">Active Engagement</div>
+        <p class="approach-body">We execute through the GT Securities platform. Andrew leads the relationship. The platform delivers the work. You get one accountable point of contact through close and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">Get in Touch</span></div>
+        <h2 class="s-title">Let's start with a<br><em>30-minute conversation.</em></h2>
+        <p class="s-body" style="margin-bottom:3rem;">
+          Whether you are raising a fund, considering an exit, building a new line of business, or looking for capital for a portfolio company — we welcome the conversation. The first call is always complimentary.
+        </p>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value">
+            <a href="mailto:glaze@equitablecap.com" onclick="trackEmail()">glaze@equitablecap.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">LinkedIn</div>
+          <div class="contact-detail-value">
+            <a href="https://linkedin.com/in/aglaze" target="_blank" rel="noopener" onclick="trackLI()">linkedin.com/in/aglaze</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Regulatory</div>
+          <div class="contact-detail-value">
+            Securities offered through GT Securities, Inc.<br>Member FINRA &amp; SIPC
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <h3>Request a Conversation</h3>
+        <p>Tell us briefly what you are working on. We will respond within one business day.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Company / Fund Name</label>
+            <input type="text" name="company">
+          </div>
+          <div class="form-group">
+            <label>What are you exploring?</label>
+            <select name="interest">
+              <option value="">Select one</option>
+              <option value="capital_lp">Capital raise — LP or fund commitment</option>
+              <option value="capital_debt">Capital raise — direct lending / debt for my business</option>
+              <option value="ma_sell">M&amp;A — sellside (considering a sale)</option>
+              <option value="ma_buy">M&amp;A — buyside (looking to acquire)</option>
+              <option value="strategic">Strategic introductions and partnerships</option>
+              <option value="multiple">Multiple of the above</option>
+              <option value="exploratory">Not sure yet — exploratory</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Briefly describe your situation</label>
+            <textarea name="message" placeholder="What does your business or fund do, what stage are you in, and what would a meaningful outcome look like?"></textarea>
+          </div>
+          <input type="hidden" name="source" value="equitablecapitaladvisors.com/partners">
+          <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+          <button type="submit" class="form-submit">Request Conversation →</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE DISCLOSURE -->
+<div class="disclosure-band">
+  <div class="disclosure-text">
+    This page is for informational purposes only and is provided to professional contacts of Equitable Capital Advisors and GT Securities. It does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument, nor does it constitute investment, legal, tax, or accounting advice. Any transaction described would be conducted through GT Securities, a registered broker-dealer and member of FINRA and SIPC, pursuant to a separate engagement letter. The $50 billion transaction volume figure references GT Securities' platform lifetime aggregate and is not indicative of future results. Equitable Capital Advisors offers no guarantee of outcome, capital raised, transaction completion, or other result. Engagement terms and fees are defined in a written engagement letter executed prior to any transaction work. Recipients should consult their own legal, tax, and financial advisors.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-mark">E</div>
+        <p class="footer-desc">Capital, M&amp;A, and strategic partnerships for founders, General Partners, and operating CEOs — through the GT Securities broker-dealer platform.</p>
+      </div>
+      <div>
+        <div class="footer-col-h">Navigation</div>
+        <ul class="footer-ul">
+          <li><a href="#about">About</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#platform">GT Securities</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Capabilities</div>
+        <ul class="footer-ul">
+          <li><a href="#capabilities">Capital Raising</a></li>
+          <li><a href="#capabilities">M&amp;A Advisory</a></li>
+          <li><a href="#capabilities">Strategic Introductions</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">Email</div>
+          <div class="footer-contact-v"><a href="mailto:glaze@equitablecap.com">glaze@equitablecap.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-l">LinkedIn</div>
+          <div class="footer-contact-v"><a href="https://linkedin.com/in/aglaze" target="_blank" rel="noopener">linkedin.com/in/aglaze</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Equitable Capital Advisors. All Rights Reserved. Securities offered through GT Securities, Inc., member FINRA, SIPC.</div>
+      <div class="footer-vv">Powered by <a href="https://www.victoryvision.app" target="_blank" rel="noopener">Victory Vision AI</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Mobile nav
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 90);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => obs.observe(el));
+
+  // Conversion tracking helpers
+  function trackEmail() {
+    try {
+      if (typeof gtag === 'function') gtag('event', 'Partner_Email_Click');
+      if (window.uetq) window.uetq.push('event', 'Partner_Email_Click', {});
+    } catch(e){}
+  }
+  function trackLI() {
+    try {
+      if (typeof gtag === 'function') gtag('event', 'Partner_LinkedIn_Click');
+      if (window.uetq) window.uetq.push('event', 'Partner_LinkedIn_Click', {});
+    } catch(e){}
+  }
+
+  // Contact form
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      });
+      if (res.ok) {
+        status.className = 'success';
+        status.textContent = 'Thank you — we will be in touch within one business day.';
+        form.reset();
+        try {
+          if (typeof gtag === 'function') gtag('event', 'Partner_Form_Submit');
+          if (window.uetq) window.uetq.push('event', 'Partner_Form_Submit', {});
+        } catch(e){}
+      } else { throw new Error(); }
+    } catch {
+      status.className = 'error';
+      status.textContent = 'Something went wrong. Please email us at glaze@equitablecap.com.';
+    } finally {
+      btn.textContent = 'Request Conversation →';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
