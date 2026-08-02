@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Lending Opportunity — Equitable Capital Advisors</title>
+  <meta name="description" content="Two private-credit mandates reviewing U.S. lower middle-market borrowing opportunities through Equitable Capital Advisors and the GT Securities platform.">
+  <meta property="og:title" content="Direct Lending Opportunity — Equitable Capital Advisors">
+  <meta property="og:description" content="Two private-credit mandates for U.S. lower middle-market borrowers. Senior secured, asset-backed, and cash-flow lending through the GT Securities platform.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='4' fill='%231a3a6b'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='%23b8986a' font-family='Georgia'>E</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Google Ads / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=QC-1776617428477"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'QC-1776617428477');
+  </script>
+
+  <!-- Victory Vision engagement tracking -->
+  <script>(function(){var CID="glaze@equitablecap.com",SLUG="directlending",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};window.__VV_GADS__=null;/*VV-GADS-WIN*/var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){if(window.__VV_GADS__&&typeof gtag==="function"&&window.__VV_GADS__.send_to){try{gtag("event","conversion",{send_to:window.__VV_GADS__.send_to,value:window.__VV_GADS__.value||0,currency:"USD"});}catch(e){}}fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});});}catch(e){}})();</script>
+
+  <style>
+    :root {
+      --navy:    #1a3a6b;
+      --navy-dk: #0f2448;
+      --navy-xd: #081630;
+      --gold:    #b8986a;
+      --gold-lt: #d4b896;
+      --gold-dk: #8a6e42;
+      --white:   #ffffff;
+      --off:     #f8f7f4;
+      --rule:    #e6e2da;
+      --gray:    #8a8f9a;
+      --text:    #252525;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      background: rgba(8,22,48,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,152,106,0.18);
+      transition: padding 0.35s;
+    }
+    nav.scrolled { padding: 1rem 3.5rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; flex-shrink: 0; }
+    .nav-mark { width: 36px; height: 36px; border: 1.5px solid var(--gold); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.35rem; font-weight: 300; color: var(--gold); letter-spacing: -1px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--white); letter-spacing: 0.02em; line-height: 1.2; }
+    .nav-name span { display: block; font-family: var(--sans); font-size: 0.58rem; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.72); text-decoration: none; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta { border: 1px solid var(--gold) !important; color: var(--gold) !important; padding: 0.5rem 1.3rem; border-radius: 2px; transition: background 0.2s, color 0.2s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy-xd) !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 201; }
+    .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: all 0.3s; }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #home { position: relative; min-height: 92vh; display: flex; align-items: center; background: var(--navy-xd); overflow: hidden; }
+    .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(184,152,106,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(184,152,106,0.05) 1px, transparent 1px); background-size: 72px 72px; }
+    .hero-glow { position: absolute; top: -200px; left: -200px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(26,58,107,0.5) 0%, transparent 70%); }
+    .hero-glow-2 { position: absolute; bottom: -150px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(184,152,106,0.08) 0%, transparent 70%); }
+    .hero-content { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 9rem 3.5rem 5rem; width: 100%; text-align: center; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+    .hero-tag::before, .hero-tag::after { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .hero-tag-text { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
+    .hero-h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.07; color: var(--white); margin-bottom: 1.6rem; opacity: 0; animation: fadeUp 0.9s 0.35s forwards; }
+    .hero-h1 em { font-style: italic; color: var(--gold-lt); }
+    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.62); max-width: 640px; margin: 0 auto 2.2rem; opacity: 0; animation: fadeUp 0.9s 0.5s forwards; }
+    .hero-note { font-size: 0.82rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.4); max-width: 600px; margin: 0 auto 2.8rem; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.7s forwards; }
+    .hero-confidential { font-size: 0.7rem; font-weight: 300; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); margin-top: 1.6rem; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
+
+    .btn-gold { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold); color: var(--navy-xd); padding: 0.85rem 2rem; border-radius: 2px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8); padding: 0.85rem 2rem; border-radius: 2px; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+    /* ── SECTION FOUNDATIONS ───────────────────────────── */
+    section { padding: 7rem 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 3.5rem; }
+    .s-label { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.4rem; }
+    .s-label::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+    .s-label-text { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
+    .s-title { font-family: var(--serif); font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--navy-dk); margin-bottom: 1.4rem; }
+    .s-title em { font-style: italic; }
+    .s-title.light { color: var(--white); }
+    .s-title.light em { color: var(--gold-lt); }
+    .s-body { font-size: 0.98rem; font-weight: 300; line-height: 1.85; color: #5a5a5a; }
+    .s-body.light { color: rgba(255,255,255,0.58); }
+    .section-head { max-width: 700px; margin-bottom: 3.5rem; }
+
+    /* ── MANDATES ──────────────────────────────────────── */
+    #mandates { background: var(--white); }
+    .mandate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); }
+    .mandate-card { background: var(--white); padding: 3rem; position: relative; overflow: hidden; transition: transform 0.3s; }
+    .mandate-card:hover { transform: translateY(-3px); }
+    .mandate-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+    .mandate-card:hover::after { transform: scaleX(1); }
+    .mandate-eyebrow { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .mandate-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--navy-dk); margin-bottom: 1.8rem; line-height: 1.2; }
+    .spec-row { display: grid; grid-template-columns: 38% 1fr; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+    .spec-row:last-of-type { border-bottom: none; }
+    .spec-k { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); padding-top: 1px; }
+    .spec-v { font-size: 0.88rem; font-weight: 300; line-height: 1.5; color: var(--text); }
+    .mandate-foot { font-size: 0.74rem; font-weight: 300; font-style: italic; color: #999; line-height: 1.55; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+
+    /* ── FIT (dark) ────────────────────────────────────── */
+    #fit { background: var(--navy-xd); }
+    .fit-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .fit-block-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 1.6rem; }
+    .fit-block-title.no { color: var(--gold-lt); }
+    .fit-list { list-style: none; }
+    .fit-list li { display: flex; align-items: flex-start; gap: 0.9rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 0.9rem; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,0.7); }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-list.yes li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 9px; }
+    .fit-list.no li::before { content: '—'; color: rgba(255,255,255,0.3); flex-shrink: 0; line-height: 1.6; }
+    .fit-intro { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; }
+    .fit-uncertain { margin-top: 5rem; text-align: center; font-family: var(--serif); font-style: italic; font-size: 1.4rem; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
+    /* ── PROCESS ───────────────────────────────────────── */
+    #process { background: var(--off); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin-top: 4rem; }
+    .process-step { position: relative; padding-top: 2rem; }
+    .process-step::before { content: ''; position: absolute; top: 0; left: 0; width: 40px; height: 2px; background: var(--gold); }
+    .process-num { font-family: var(--serif); font-size: 0.72rem; font-weight: 300; color: var(--gold); letter-spacing: 0.16em; margin-bottom: 0.9rem; }
+    .process-title { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; color: var(--navy-dk); margin-bottom: 0.8rem; line-height: 1.25; }
+    .process-body { font-size: 0.84rem; font-weight: 300; line-height: 1.7; color: #666; }
+    .process-fees { margin-top: 3.5rem; background: var(--white); border-left: 3px solid var(--gold); padding: 1.6rem 2rem; border-radius: 0 2px 2px 0; font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: #5a5a5a; }
+
+    /* ── ABOUT ─────────────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: start; }
+    .founder-card { background: var(--off); border: 1px solid var(--rule); border-radius: 3px; padding: 2.8rem; }
+    .founder-name { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--navy-dk); margin-bottom: 0.3rem; }
+    .founder-role { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; }
+    .founder-creds { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .cred { font-size: 0.75rem; font-weight: 400; color: var(--navy); background: var(--white); border: 1px solid var(--rule); padding: 0.35rem 0.85rem; border-radius: 100px; }
+
+    /* ── CONTACT (dark) ────────────────────────────────── */
+    #contact { background: var(--navy-xd); text-align: center; }
+    .contact-inner { max-width: 720px; margin: 0 auto; }
+    .contact-card { font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.7); margin: 2rem 0; }
+    .contact-card strong { color: var(--white); font-weight: 500; font-size: 1.05rem; }
+    .contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer { background: var(--navy-xd); padding: 4rem 0 2rem; border-top: 1px solid rgba(184,152,106,0.15); }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; }
+    .footer-links a { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-lt); }
+    .footer-legal { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.8rem; margin-bottom: 1.8rem; }
+    .footer-legal p { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.3); line-height: 1.7; max-width: 980px; margin: 0 auto; text-align: center; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.28); }
+    .footer-vv a { color: var(--gold); text-decoration: none; }
+
+    /* ── ANIMATIONS ────────────────────────────────────── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .fit-layout, .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      nav.scrolled { padding: 0.9rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--navy-xd); justify-content: center; align-items: center; gap: 2.2rem; z-index: 199; }
+      .nav-links.open a { font-size: 1rem; }
+      .nav-toggle { display: flex; }
+      .hero-content { padding: 6.5rem 1.5rem 4rem; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
+      .mandate-grid { grid-template-columns: 1fr; }
+      .mandate-card { padding: 2rem; }
+      .process-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-mark">E</div>
+    <div class="nav-name">Equitable Capital<span>Advisors</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#mandates">Mandates</a></li>
+    <li><a href="#fit">Fit</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="hero-tag-text">Private Credit · GT Securities Platform</span></div>
+    <h1 class="hero-h1">Direct Lending <em>Opportunity</em></h1>
+    <p class="hero-sub">
+      Equitable Capital Advisors, through the GT Securities platform, has direct relationships with two private-credit lenders currently reviewing U.S. lower middle-market borrowing opportunities.
+    </p>
+    <p class="hero-note">
+      Relevant if you are a business owner, CFO, real estate operator, independent sponsor, or PE sponsor with a near-term debt need supported by cash flow, collateral, or both. This is an initial fit assessment only — the lenders make all credit, pricing, structuring, and approval decisions independently.
+    </p>
+    <div class="hero-btns">
+      <a href="mailto:glaze@equitablecap.com?subject=Direct%20Lending%20Inquiry" class="btn-gold">Email Andrew Glaze →</a>
+      <a href="#mandates" class="btn-ghost">Review the Mandates ↓</a>
+    </div>
+    <div class="hero-confidential">All conversations are confidential.</div>
+  </div>
+</section>
+
+<!-- MANDATES -->
+<section id="mandates">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="s-label"><span class="s-label-text">The Mandates</span></div>
+      <h2 class="s-title">Two active private-credit<br><em>lending mandates.</em></h2>
+      <p class="s-body">Indicative parameters describing each lender's stated preferences. Each lender retains full discretion over credit, pricing, structuring, and approval.</p>
+    </div>
+    <div class="mandate-grid">
+      <div class="mandate-card reveal">
+        <div class="mandate-eyebrow">Mandate A</div>
+        <div class="mandate-title">Asian Institutional Lender</div>
+        <div class="spec-row"><div class="spec-k">Geography</div><div class="spec-v">U.S. preferred; select South America considered</div></div>
+        <div class="spec-row"><div class="spec-k">Asset Type</div><div class="spec-v">Senior secured, asset-backed, or cash-flowing credit</div></div>
+        <div class="spec-row"><div class="spec-k">Transaction Size</div><div class="spec-v">Approximately $7M–$10M+</div></div>
+        <div class="spec-row"><div class="spec-k">Tenor</div><div class="spec-v">Generally 1–3 years</div></div>
+        <div class="spec-row"><div class="spec-k">Target Return</div><div class="spec-v">~12.5% annualized, subject to underwriting, structure, and market conditions</div></div>
+        <div class="spec-row"><div class="spec-k">Style</div><div class="spec-v">Direct lending preferred</div></div>
+        <p class="mandate-foot">Indicative parameters only. The lender retains all credit, pricing, structuring, and approval decisions.</p>
+      </div>
+      <div class="mandate-card reveal">
+        <div class="mandate-eyebrow">Mandate B</div>
+        <div class="mandate-title">U.S. Family-Office Private Credit</div>
+        <div class="spec-row"><div class="spec-k">Geography</div><div class="spec-v">United States</div></div>
+        <div class="spec-row"><div class="spec-k">Focus</div><div class="spec-v">Short-term opportunistic credit for lower middle-market companies</div></div>
+        <div class="spec-row"><div class="spec-k">Style</div><div class="spec-v">Direct lending; debt only</div></div>
+        <div class="spec-row"><div class="spec-k">Use Cases</div><div class="spec-v">Working capital, bridge financing, acquisitions, inventory/trade finance, liquidity events</div></div>
+        <div class="spec-row"><div class="spec-k">Transaction Size</div><div class="spec-v">$250K–$15M; core ticket $1M–$5M</div></div>
+        <div class="spec-row"><div class="spec-k">Tenor</div><div class="spec-v">1–12 months</div></div>
+        <div class="spec-row"><div class="spec-k">Credit Framework</div><div class="spec-v">Cash-flow-first; asset-based considered case-by-case</div></div>
+        <div class="spec-row"><div class="spec-k">Collateral</div><div class="spec-v">AR, inventory, real estate, equipment, or other business assets where applicable</div></div>
+        <div class="spec-row"><div class="spec-k">Structure</div><div class="spec-v">Senior secured, junior secured, or off-balance-sheet; generally up to 10% of revenue or 1× TTM EBITDA</div></div>
+        <div class="spec-row"><div class="spec-k">Economics</div><div class="spec-v">Targeted 1.15×–1.35× MOIC, subject to underwriting; weekly or bi-weekly amortization may apply</div></div>
+        <p class="mandate-foot">Indicative parameters only. No financing outcome or structure is guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section id="fit">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="s-label"><span class="s-label-text">Borrower Fit</span></div>
+      <h2 class="s-title light">Knowing quickly whether<br><em>this is worth a conversation.</em></h2>
+    </div>
+    <div class="fit-layout">
+      <div class="reveal">
+        <div class="fit-block-title">Likely a fit</div>
+        <ul class="fit-list yes">
+          <li>U.S.-based operating companies with revenue, cash flow, collateral, or a clear repayment source</li>
+          <li>Founders, CEOs, owners, or CFOs seeking $250K–$15M of near-term debt capital</li>
+          <li>Real estate operators pursuing acquisitions, value-add, refinancing, or bridge-to-permanent financing</li>
+          <li>Inventory-heavy consumer, distribution, wholesale, or trade-finance businesses</li>
+          <li>Lower middle-market PE firms or independent sponsors seeking portfolio-company financing</li>
+          <li>Multi-unit franchise operators needing growth, equipment, acquisition, or build-out capital</li>
+          <li>Founders or sponsors evaluating recapitalizations, partial exits, dividend recaps, or liquidity events requiring short-term bridge debt</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="fit-block-title no">Generally not a fit</div>
+        <p class="fit-intro">To save time, these mandates are generally not intended for:</p>
+        <ul class="fit-list no">
+          <li>Pre-revenue or seed-stage startups</li>
+          <li>Pure equity capital needs</li>
+          <li>Borrowers without cash flow, collateral, or a credible repayment source</li>
+          <li>Capital needs below $250K</li>
+          <li>Long-dated financing needs beyond approximately three years</li>
+          <li>Highly speculative real estate or raw-land development without clear collateral and repayment support</li>
+          <li>Over-leveraged borrowers where total debt would exceed ~1× TTM EBITDA on a pro-forma basis</li>
+          <li>Non-U.S. borrowers, except select South American opportunities under Mandate A</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fit-uncertain reveal">If there is uncertainty, a brief conversation can usually determine whether the opportunity is worth reviewing.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="s-label"><span class="s-label-text">How It Works</span></div>
+      <h2 class="s-title">A straightforward path<br><em>from conversation to close.</em></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-num">Step 01</div>
+        <div class="process-title">Initial Conversation</div>
+        <p class="process-body">A 15–30 minute call to understand the borrower, use of proceeds, timing, collateral, and repayment source. No documentation required beforehand.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Step 02</div>
+        <div class="process-title">Preliminary Fit Review</div>
+        <p class="process-body">If there's potential fit, we request a focused package: recent financials, capital structure, use of proceeds, collateral summary, and transaction background.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Step 03</div>
+        <div class="process-title">Lender Introduction</div>
+        <p class="process-body">Equitable presents the opportunity to the appropriate lender through the GT Securities platform. The lender independently determines whether to proceed.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">Step 04</div>
+        <div class="process-title">Term Sheet &amp; Closing</div>
+        <p class="process-body">If the lender is interested, borrower and lender move through term sheet, diligence, documentation, and closing, with Equitable and GT Securities supporting the process.</p>
+      </div>
+    </div>
+    <div class="process-fees reveal">There are no fees for the initial conversation or preliminary review. Any transaction fees would be addressed in a separate engagement letter.</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="reveal">
+        <div class="s-label"><span class="s-label-text">About</span></div>
+        <h2 class="s-title">Relationship-led<br><em>capital advisory.</em></h2>
+        <p class="s-body">
+          Equitable Capital Advisors is a relationship-led placement and capital advisory firm operating through the GT Securities broker-dealer platform. GT Securities is a registered broker-dealer and member of FINRA and SIPC.
+        </p>
+      </div>
+      <div class="reveal" style="padding-top:1rem;">
+        <div class="founder-card">
+          <div class="founder-name">Andrew Glaze</div>
+          <div class="founder-role">Founder · Registered Representative, GT Securities</div>
+          <p class="s-body" style="margin-bottom:1.6rem;">
+            Founder of Equitable Capital Advisors, with experience across capital markets, strategic transactions, and relationship-driven business development.
+          </p>
+          <div class="founder-creds">
+            <span class="cred">West Point Graduate</span>
+            <span class="cred">U.S. Army Veteran</span>
+            <span class="cred">CFA Charterholder</span>
+            <span class="cred">Public-Company Board Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="s-label" style="justify-content:center;"><span class="s-label-text">Next Step</span></div>
+      <h2 class="s-title light">If this matches a current or<br><em>anticipated capital need.</em></h2>
+      <div class="contact-card">
+        <strong>Andrew Glaze</strong><br>
+        Equitable Capital Advisors<br>
+        Registered Representative, GT Securities
+      </div>
+      <div class="contact-btns">
+        <a href="mailto:glaze@equitablecap.com?subject=Direct%20Lending%20Inquiry" class="btn-gold">Email Andrew Glaze →</a>
+        <a href="https://www.linkedin.com/in/aglaze" target="_blank" rel="noopener" class="btn-ghost">Connect on LinkedIn</a>
+      </div>
+      <div class="hero-confidential" style="opacity:1; animation:none; margin-top:2rem;">All conversations are confidential.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-legal">
+      <p>This communication is for informational purposes only and is being provided to professional contacts of Equitable Capital Advisors and GT Securities to identify potential financing opportunities. It does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument, nor does it constitute investment, legal, tax, or accounting advice. Any transaction described herein would be conducted through GT Securities, a registered broker-dealer and member of FINRA and SIPC, pursuant to a separate engagement letter with the borrower. The lenders referenced will make all credit, structuring, pricing, and approval decisions independently. Target returns, ranges, sizes, and tenor parameters are indicative descriptions of the lenders' stated preferences and are subject to change without notice. No specific return, structure, financing outcome, or commitment is offered or guaranteed. Past performance is not indicative of future results. All transactions are subject to lender approval, underwriting, documentation, market conditions, and applicable law. Recipients should consult their own legal, tax, and financial advisors. Equitable Capital Advisors and GT Securities are separate from the lenders referenced.</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Equitable Capital Advisors. All Rights Reserved.</div>
+      <div class="footer-vv">Powered by <a href="https://www.victoryvision.app" target="_blank" rel="noopener">Victory Vision AI</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); obs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
