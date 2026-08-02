@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-101: What Founder-Owned Manufacturers Should Know | Equitable Capital Advisors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --accent-warm: #fd7e14;
+            --ink: #1a2230;
+            --ink-soft: #4a5568;
+            --bg: #ffffff;
+            --bg-alt: #f6f8fb;
+            --on-dark: #ffffff;
+            --gold: #c9a961;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: Georgia, serif;
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+        
+        h1 em, h2 em, h3 em, h4 em, h5 em {
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: #9a0f33;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(187, 19, 62, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        
+        .btn-light {
+            background: #ffffff;
+            color: var(--primary);
+        }
+        
+        .btn-light:hover {
+            background: var(--bg-alt);
+        }
+        
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a3161 0%, #1a4a7a 100%);
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.25;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(26, 74, 122, 0.88) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 0;
+        }
+        
+        .hero-content * {
+            color: var(--on-dark);
+        }
+        
+        .eyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 24px;
+            color: var(--on-dark);
+            font-weight: 300;
+        }
+        
+        .hero h1 .accent {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+        }
+        
+        .hero-subhead {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+        }
+        
+        .hero-supporting {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 750px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        section.alt {
+            background: var(--bg-alt);
+        }
+        
+        section.dark {
+            background: var(--primary);
+        }
+        
+        section.dark * {
+            color: var(--on-dark);
+        }
+        
+        section.dark h2,
+        section.dark h3,
+        section.dark h4 {
+            color: var(--on-dark);
+        }
+        
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        section.dark .section-label {
+            color: var(--gold);
+        }
+        
+        h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+        
+        h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+        
+        .lead {
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--ink-soft);
+            margin-bottom: 32px;
+        }
+        
+        section.dark .lead {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(10, 49, 97, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(10, 49, 97, 0.12);
+        }
+        
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 24px;
+        }
+        
+        .card h3 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-weight: 300;
+        }
+        
+        .card p {
+            color: var(--ink-soft);
+            line-height: 1.7;
+        }
+        
+        .criteria-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        
+        .criteria-list li {
+            padding: 16px 0;
+            padding-left: 36px;
+            position: relative;
+            font-size: 18px;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+        }
+        
+        section.dark .criteria-list li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .criteria-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        section.dark .criteria-list li:before {
+            color: var(--gold);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-top: 60px;
+        }
+        
+        .step {
+            position: relative;
+        }
+        
+        .step-number {
+            font-family: Georgia, serif;
+            font-size: 72px;
+            font-weight: 300;
+            color: var(--accent);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        
+        .step h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+        
+        .step p {
+            color: var(--ink-soft);
+            line-height: 1.7;
+        }
+        
+        .bio-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 48px;
+        }
+        
+        .bio-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a4a7a 100%);
+            border-radius: 8px;
+        }
+        
+        .bio-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .bio-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .form-section {
+            background: var(--primary);
+            color: var(--on-dark);
+        }
+        
+        .form-section h2,
+        .form-section p {
+            color: var(--on-dark);
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 48px auto 0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 48px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--on-dark);
+            font-size: 15px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--ink);
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: #ffffff;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+        }
+        
+        .thank-you {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: rgba(201, 169, 97, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+        }
+        
+        .thank-you.visible {
+            display: block;
+        }
+        
+        .thank-you h3 {
+            color: var(--on-dark);
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+        
+        .thank-you p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .disclosure {
+            background: var(--bg-alt);
+            padding: 60px 0;
+        }
+        
+        .disclosure p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--ink-soft);
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 60px 0 40px;
+        }
+        
+        footer * {
+            color: var(--on-dark);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .contact-info {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(10, 49, 97, 0.1);
+        }
+        
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 52px;
+            }
+            
+            h2 {
+                font-size: 40px;
+            }
+            
+            .grid, .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .bio-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                min-height: auto;
+            }
+            
+            .hero-content {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero-subhead {
+                font-size: 18px;
+            }
+            
+            .hero-supporting {
+                font-size: 16px;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            h3 {
+                font-size: 24px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .form-container {
+                padding: 32px 24px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    
+        /* --- logo sizing patch --- */
+        header img { height: clamp(40px, 6vw, 56px) !important; width: auto !important; }
+    </style>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <script type="text/javascript">
+        _linkedin_partner_id = "XXXXXX";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+            window.lintrk.q=[]}
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    
+    <script>
+        (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"XXXXXXXX"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=QC-1776617428477"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','QC-1776617428477');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+<style>[data-variant="B"] .cta-button,[data-variant="B"] a.btn,[data-variant="B"] button{border-radius:8px !important} [data-variant="B"] .hero h1{letter-spacing:-0.5px}
+        /* --- logo sizing patch --- */
+        header img { height: clamp(40px, 6vw, 56px) !important; width: auto !important; }
+    </style></head>
+<body data-variant="B">
+    <header>
+        <div class="container">
+            <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1784653013/czixgy8shanglme5wocw.jpg" alt="Equitable Capital Advisors logo">
+            <a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Header Book Call'});">Schedule a consultation</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1784658830/d1gczeruu0i4qapwxsja.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <span class="eyebrow">PE-101 for Founder-Owned Manufacturers</span>
+                <h1>
+                    You Built More Than <span class="accent">a Business</span>
+                </h1>
+                <p class="hero-subhead">
+                    Before you talk to any buyer, understand what a serious partner would actually do with your company, your people, your name, and your next chapter.
+                </p>
+                <p class="hero-supporting">
+                    Equitable Capital Advisors works with experienced buyers and capital partners who look for founder-owned industrial companies one company at a time, not through a mass process.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Hero Book Call'});">Have a Confidential 20-Minute Conversation</a>
+                    <a href="mailto:andrew@equitablecapitaladvisors.com" class="btn btn-light" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Hero Email'});">Send a Private Note</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container-narrow">
+            <span class="section-label">You Have Probably Been Called Before</span>
+            <h2>This Is <em>Different</em></h2>
+            <p class="lead">
+                You have likely received years of calls and emails from private equity firms, young associates, brokers, and search funds. Most of them are looking for a transaction. This is not that.
+            </p>
+            <p>
+                The conversation we offer is not a request to sell. It is a way to understand whether any serious buyer or capital partner would actually fit your company, your people, and your goals.
+            </p>
+            <p>
+                You do not need another cold call. You need to know who is serious, who understands your industry, and who would respect what made the company valuable in the first place.
+            </p>
+            <p>
+                Before you talk to anyone about what comes next, you deserve to understand the landscape, the structure, the options, and the risks—without pressure, without a pitch book, and without any assumption that you need to make a decision today.
+            </p>
+        </div>
+    </section>
+
+    <section class="alt reveal">
+        <div class="container">
+            <span class="section-label">The Right Fit</span>
+            <h2>The Companies That <em>Usually Fit</em></h2>
+            <p class="lead">
+                We work with founder-owned and family-owned manufacturing and industrial businesses that have built real technical capability, strong customer relationships, and a reputation worth protecting.
+            </p>
+            
+            <ul class="criteria-list">
+                <li>Founder-owned or family-owned, not currently private-equity backed</li>
+                <li>$3 million to $20 million EBITDA</li>
+                <li>$15 million to $150 million revenue</li>
+                <li>Niche manufacturing or industrial services—precision machining, metal forming, stamping, tooling, foundry, aerospace and defense components, machinery, automation equipment, food-processing equipment, industrial textiles, specialty components</li>
+                <li>Real technical capability that is hard to replicate</li>
+                <li>Strong customer relationships built over decades</li>
+                <li>Management team or owner willing to stay involved during a transition</li>
+                <li>Room to grow through people, systems, customers, equipment, or add-on acquisitions</li>
+            </ul>
+            
+            <p style="margin-top: 32px; font-style: italic; color: var(--ink-soft);">
+                If this sounds close but not exact, it may still be worth a conversation.
+            </p>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container-narrow">
+            <span class="section-label">The First Call</span>
+            <h2>No Materials. No Obligation. <em>No Decision to Sell.</em></h2>
+            <p class="lead">
+                A first conversation is 20 minutes. It is private. You do not need to send financials, customer lists, confidential information memorandums, or any other materials.
+            </p>
+            <p>
+                The call is simply to understand:
+            </p>
+            <ul style="margin: 24px 0; padding-left: 24px; line-height: 1.9;">
+                <li>What you built</li>
+                <li>What you are worried about</li>
+                <li>Whether the company fits any serious buyer or capital partner</li>
+                <li>What a buyer would likely care about</li>
+                <li>Whether staying independent, bringing in a partner, or doing nothing may be the right answer</li>
+            </ul>
+            <p style="font-size: 20px; font-weight: 600; color: var(--primary); margin-top: 32px;">
+                The first call is not a process. It is a conversation.
+            </p>
+        </div>
+    </section>
+
+    <section class="dark reveal">
+        <div class="container">
+            <span class="section-label">What Thoughtful Partners Offer</span>
+            <h2>Taking Risk Off the Table <em>Without Walking Away</em></h2>
+            <p class="lead">
+                In some transactions, an owner sells part of the company and keeps ownership in the next version of the business. That structure can allow you to take some risk off the table while still participating if the company grows.
+            </p>
+            
+            <div class="grid">
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="#0a3161" stroke-width="3"/>
+                        <path d="M20 32L28 40L44 24" stroke="#bb133e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Continuity</h3>
+                    <p>The owner may remain involved. Management may continue running the company. Employees and customers may see continuity, not disruption.</p>
+                </div>
+                
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="20" width="40" height="32" rx="2" stroke="#0a3161" stroke-width="3"/>
+                        <path d="M22 20V16C22 13.7909 23.7909 12 26 12H38C40.2091 12 42 13.7909 42 16V20" stroke="#bb133e" stroke-width="3"/>
+                        <circle cx="32" cy="36" r="4" fill="#fd7e14"/>
+                    </svg>
+                    <h3>Capital for Growth</h3>
+                    <p>The company may gain capital for equipment, acquisitions, new facilities, or expansion—without taking on traditional bank debt.</p>
+                </div>
+                
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 8L40 24H24L32 8Z" stroke="#0a3161" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M24 24L16 40H48L40 24H24Z" stroke="#bb133e" stroke-width="3" stroke-linejoin="round"/>
+                        <rect x="12" y="40" width="40" height="12" stroke="#fd7e14" stroke-width="3"/>
+                    </svg>
+                    <h3>Future Upside</h3>
+                    <p>With rollover equity, the owner may participate in future growth. If the company doubles in value, the owner's remaining stake grows with it.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 48px; font-size: 18px; font-style: italic; color: rgba(255, 255, 255, 0.85);">
+                Structure matters. Buyer quality matters. Legal, tax, accounting, and financial advice matter. Nothing should be rushed.
+            </p>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <span class="section-label">Who You'll Talk To</span>
+            <h2>A Different Kind of <em>First Conversation</em></h2>
+            
+            <div class="bio-section">
+                <div class="bio-image"></div>
+                <div class="bio-content">
+                    <h3>Andrew Glaze, CFA</h3>
+                    <p>
+                        Andrew Glaze is a West Point graduate, Army veteran, Columbia MBA, former private equity investor, public company board director, and founder of Equitable Capital Advisors.
+                    </p>
+                    <p>
+                        He operates through GT Securities, Inc., member FINRA/SIPC, a platform with approximately 300 bankers and more than $50 billion of completed transactions across capital placement and M&A advisory.
+                    </p>
+                    <p>
+                        Andrew's work is relationship-driven. The goal is not to push an owner into a process. The goal is to help the owner understand the right options before deciding what comes next.
+                    </p>
+                    <p>
+                        He has approximately 10 years of NASDAQ public board experience and works across a network of institutional direct lenders, private credit funds, family offices, and private equity firms who look for founder-owned businesses one company at a time.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <p><strong>Direct:</strong> <a href="tel:917-406-8125">917-406-8125</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:andrew@equitablecapitaladvisors.com">andrew@equitablecapitaladvisors.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt reveal">
+        <div class="container">
+            <span class="section-label">How It Works</span>
+            <h2>Three <em>Simple Steps</em></h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Book a Call or Send a Note</h3>
+                    <p>Schedule a confidential 20-minute conversation or send a private email. No materials required. No pressure. Just a conversation about what you built and what you are thinking about.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Understand Your Options</h3>
+                    <p>We will discuss whether your company fits what serious buyers or capital partners are looking for, what structure might make sense, and what questions you should be asking before talking to anyone else.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Decide What Comes Next</h3>
+                    <p>After the conversation, you decide. Stay independent. Explore a partnership. Do nothing. Bring in a strategic advisor. The choice is yours. There is no obligation and no assumption that anything needs to happen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section reveal">
+        <div class="container-narrow">
+            <span class="section-label">Schedule a consultation</span>
+            <h2>You Do Not Have to Be Ready to Sell to <em>Have the Conversation</em></h2>
+            <p class="lead">
+                If you own or know a founder-owned manufacturing business, start with a private conversation. No pitch book required. No obligation. No assumption that anything needs to happen.
+            </p>
+            
+            <div class="form-container">
+                <form id="leadForm">
+                    <input type="hidden" name="source" value="landing">
+                    <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+                    <input type="hidden" name="page_slug" value="lmmindustrials">
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">What would you like to discuss? (Optional)</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-submit">Submit Inquiry</button>
+                </form>
+                
+                <div class="thank-you" id="thankYou">
+                    <h3>Thank You</h3>
+                    <p>We have received your inquiry and will be in touch within 24 hours.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="margin-bottom: 16px; color: rgba(255, 255, 255, 0.9);">Or schedule directly:</p>
+                <a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-light" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Form Section Book Call'});">Book a Confidential Call</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="disclosure">
+        <div class="container-narrow">
+            <p>
+                <strong>Important Disclosures:</strong> Securities offered through GT Securities, Inc., member FINRA/SIPC. Equitable Capital Advisors and GT Securities are separate entities. This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Nothing on this website constitutes legal, tax, accounting, investment, insurance, or valuation advice. No outcomes, valuations, financing, capital commitments, buyer interest, or transactions are guaranteed. Any securities-related activity is conducted only through approved materials and appropriate eligibility, suitability, diligence, and compliance processes. Past performance is not indicative of future results. All investments involve risk, including the potential loss of principal. Prospective clients should consult with their own legal, tax, accounting, and financial advisors before entering into any transaction.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">Equitable Capital Advisors</div>
+                <div class="footer-links">
+                    <a href="mailto:andrew@equitablecapitaladvisors.com">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Equitable Capital Advisors. All rights reserved.</p>
+                <p style="margin-top: 8px; font-size: 13px;">Securities offered through GT Securities, Inc., member FINRA/SIPC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    e.target.style.display = 'none';
+                    document.getElementById('thankYou').classList.add('visible');
+                    
+                    gtag('event', 'conversion', {
+                        'event_category': 'Form',
+                        'event_label': 'Lead Submission'
+                    });
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an error submitting your inquiry. Please email andrew@equitablecapitaladvisors.com directly or call 917-406-8125.');
+            }
+        });
+        
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                if (maxScroll > 25 && maxScroll < 30) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '25%'});
+                } else if (maxScroll > 50 && maxScroll < 55) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '50%'});
+                } else if (maxScroll > 75 && maxScroll < 80) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '75%'});
+                } else if (maxScroll > 90) {
+                    gtag('event', 'scroll', {'event_category': 'Engagement', 'event_label': '100%'});
+                }
+            }
+        });
+        
+        document.querySelectorAll('a[href*="calendly"]').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Calendly Link'});
+            });
+        });
+        
+        document.querySelectorAll('a[href^="mailto"]').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Email Link'});
+            });
+        });
+        
+        document.querySelectorAll('a[href^="tel"]').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Phone Link'});
+            });
+        });
+    </script>
+<script>
+(function(){
+  var PAGE_ID="190",CUSTOMER_ID="glaze@equitablecap.com",AB_VARIANT="A";
+  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
+  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
+  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
+  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
+})();
+</script>
+</body>
+</html>
