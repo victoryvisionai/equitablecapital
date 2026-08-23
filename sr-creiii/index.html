@@ -1,988 +1,1037 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoneRiver Fund III | Equitable Capital Advisors</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0a3161;
-            --accent: #bb133e;
-            --accent-alt: #fd7e14;
-            --ink: #1a2230;
-            --ink-soft: #4a5568;
-            --bg: #ffffff;
-            --bg-alt: #f6f8fb;
-            --on-dark: #ffffff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--ink);
-            background: var(--bg);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Georgia', serif;
-            font-weight: 300;
-            font-style: italic;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(10, 49, 97, 0.1);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        header img {
-            height: 40px;
-            width: auto;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .btn-primary {
-            background: var(--accent);
-            color: #ffffff;
-        }
-        
-        .btn-primary:hover {
-            background: #9a0f32;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(187, 19, 62, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: #ffffff;
-        }
-        
-        .hero {
-            position: relative;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--primary) 0%, #0d4580 100%);
-        }
-        
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(13, 69, 128, 0.88) 100%);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: var(--on-dark);
-            padding: 4rem 0;
-        }
-        
-        .eyebrow {
-            font-size: 0.875rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: var(--accent-alt);
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            font-variant: small-caps;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            color: var(--on-dark);
-            line-height: 1.1;
-        }
-        
-        .hero h1 .highlight {
-            color: var(--accent-alt);
-            display: block;
-        }
-        
-        .hero p {
-            font-size: 1.375rem;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.7;
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-alt);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-        }
-        
-        section {
-            padding: 6rem 0;
-        }
-        
-        section.alt {
-            background: var(--bg-alt);
-        }
-        
-        section.dark {
-            background: var(--primary);
-            color: var(--on-dark);
-        }
-        
-        section.dark h2,
-        section.dark h3,
-        section.dark p,
-        section.dark li {
-            color: var(--on-dark);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2.75rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        section.dark .section-header h2 {
-            color: var(--on-dark);
-        }
-        
-        .section-header p {
-            font-size: 1.25rem;
-            color: var(--ink-soft);
-        }
-        
-        section.dark .section-header p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .mandate-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .mandate-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        
-        .mandate-card h3 {
-            font-size: 1.125rem;
-            color: var(--accent-alt);
-            margin-bottom: 0.75rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            font-variant: small-caps;
-            font-style: normal;
-        }
-        
-        .mandate-card p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.7;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-        
-        .feature-card {
-            background: var(--bg);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(10, 49, 97, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(10, 49, 97, 0.12);
-            border-color: var(--accent);
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card p {
-            color: var(--ink-soft);
-            line-height: 1.7;
-        }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .step {
-            position: relative;
-            text-align: center;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--accent);
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0 auto 1.5rem;
-            font-family: 'Georgia', serif;
-            font-style: normal;
-        }
-        
-        .step h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .step p {
-            color: var(--ink-soft);
-            line-height: 1.7;
-        }
-        
-        .icp-section {
-            background: var(--primary);
-            color: var(--on-dark);
-        }
-        
-        .icp-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .icp-content h2 {
-            color: var(--on-dark);
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .icp-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .icp-category {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .icp-category h3 {
-            color: var(--accent-alt);
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-        
-        .icp-category p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        
-        .icp-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .icp-category li {
-            color: rgba(255, 255, 255, 0.85);
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-        }
-        
-        .icp-category li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent-alt);
-            font-weight: 700;
-        }
-        
-        .form-section {
-            background: var(--bg-alt);
-        }
-        
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--bg);
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(10, 49, 97, 0.08);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid rgba(10, 49, 97, 0.2);
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-        
-        .form-submit {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.125rem;
-        }
-        
-        .thank-you {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 6px;
-            color: #155724;
-        }
-        
-        .thank-you.show {
-            display: block;
-        }
-        
-        .disclosure {
-            background: var(--bg-alt);
-            padding: 3rem 0;
-            border-top: 1px solid rgba(10, 49, 97, 0.1);
-        }
-        
-        .disclosure p {
-            font-size: 0.875rem;
-            color: var(--ink-soft);
-            line-height: 1.7;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        footer {
-            background: var(--primary);
-            color: var(--on-dark);
-            padding: 3rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .footer-links a {
-            color: var(--on-dark);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-alt);
-        }
-        
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .mandate-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .icp-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-            
-            section {
-                padding: 4rem 0;
-            }
-            
-            .hero {
-                min-height: auto;
-                padding: 4rem 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.25rem;
-            }
-            
-            .hero p {
-                font-size: 1.125rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-container {
-                padding: 2rem 1.5rem;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StoneRiver Fund III | Equitable Capital Advisors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #0a3161;
+--accent: #bb133e;
+--accent-bright: #fd7e14;
+--ink: #1a2230;
+--ink-soft: #4a5568;
+--bg: #ffffff;
+--bg-alt: #f6f8fb;
+--on-dark: #ffffff;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+color: var(--ink);
+background: var(--bg);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Georgia', serif;
+font-weight: 300;
+line-height: 1.2;
+color: var(--primary);
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+font-style: italic;
+font-weight: 300;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+.container-wide {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+header {
+position: sticky;
+top: 0;
+background: rgba(255, 255, 255, 0.98);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+z-index: 1000;
+padding: 16px 0;
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo img {
+height: 40px;
+width: auto;
+}
+
+.btn {
+display: inline-block;
+padding: 12px 28px;
+border-radius: 6px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s ease;
+border: none;
+cursor: pointer;
+font-size: 15px;
+}
+
+.btn-primary {
+background: var(--accent);
+color: #ffffff;
+}
+
+.btn-primary:hover {
+background: #9a0f32;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(187, 19, 62, 0.3);
+}
+
+.btn-secondary {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+background: var(--primary);
+color: #ffffff;
+}
+
+.btn-light {
+background: #ffffff;
+color: var(--primary);
+}
+
+.btn-light:hover {
+background: var(--bg-alt);
+}
+
+.hero {
+position: relative;
+min-height: 85vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+background: linear-gradient(135deg, var(--primary) 0%, #0a4080 100%);
+}
+
+.hero-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0.25;
+z-index: 1;
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(10, 64, 128, 0.85) 100%);
+z-index: 2;
+}
+
+.hero-content {
+position: relative;
+z-index: 3;
+padding: 80px 0;
+color: var(--on-dark);
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content h3,
+.hero-content p {
+color: var(--on-dark);
+}
+
+.eyebrow {
+display: inline-block;
+font-size: 13px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1.2px;
+color: var(--accent-bright);
+margin-bottom: 16px;
+font-family: 'Inter', sans-serif;
+font-variant: small-caps;
+}
+
+.hero h1 {
+font-size: 56px;
+margin-bottom: 24px;
+max-width: 900px;
+color: var(--on-dark);
+font-weight: 300;
+}
+
+.hero h1 .highlight {
+color: var(--accent-bright);
+font-style: italic;
+}
+
+.hero p {
+font-size: 20px;
+line-height: 1.7;
+margin-bottom: 36px;
+max-width: 700px;
+color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-buttons {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+section {
+padding: 100px 0;
+}
+
+.section-alt {
+background: var(--bg-alt);
+}
+
+.section-dark {
+background: var(--primary);
+color: var(--on-dark);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p,
+.section-dark li {
+color: var(--on-dark);
+}
+
+.section-header {
+text-align: center;
+max-width: 800px;
+margin: 0 auto 60px;
+}
+
+.section-header .eyebrow {
+display: block;
+margin-bottom: 12px;
+}
+
+.section-header h2 {
+font-size: 42px;
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+.section-header p {
+font-size: 18px;
+color: var(--ink-soft);
+line-height: 1.7;
+}
+
+.section-dark .section-header p {
+color: rgba(255, 255, 255, 0.9);
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 40px;
+}
+
+.grid-3 {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+background: var(--bg);
+border-radius: 12px;
+padding: 40px;
+box-shadow: 0 2px 8px rgba(10, 49, 97, 0.08);
+transition: all 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px rgba(10, 49, 97, 0.15);
+}
+
+.card-icon {
+width: 56px;
+height: 56px;
+margin-bottom: 24px;
+}
+
+.card h3 {
+font-size: 22px;
+margin-bottom: 12px;
+font-weight: 300;
+}
+
+.card p {
+color: var(--ink-soft);
+line-height: 1.7;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 40px;
+margin: 60px 0;
+}
+
+.stat {
+text-align: center;
+}
+
+.stat-value {
+font-size: 48px;
+font-weight: 700;
+color: var(--accent);
+margin-bottom: 8px;
+font-family: 'Inter', sans-serif;
+}
+
+.section-dark .stat-value {
+color: var(--accent-bright);
+}
+
+.stat-label {
+font-size: 14px;
+color: var(--ink-soft);
+text-transform: uppercase;
+letter-spacing: 0.5px;
+font-weight: 600;
+}
+
+.section-dark .stat-label {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.process-steps {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 48px;
+margin-top: 60px;
+}
+
+.step {
+position: relative;
+text-align: center;
+}
+
+.step-number {
+width: 64px;
+height: 64px;
+border-radius: 50%;
+background: var(--accent);
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 28px;
+font-weight: 700;
+margin: 0 auto 24px;
+font-family: 'Inter', sans-serif;
+}
+
+.step h3 {
+font-size: 22px;
+margin-bottom: 12px;
+font-weight: 300;
+}
+
+.step p {
+color: var(--ink-soft);
+line-height: 1.7;
+}
+
+.mandate-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: start;
+margin-top: 40px;
+}
+
+.mandate-detail h3 {
+font-size: 18px;
+margin-bottom: 12px;
+color: var(--primary);
+font-weight: 600;
+}
+
+.mandate-detail p {
+color: var(--ink-soft);
+line-height: 1.7;
+margin-bottom: 24px;
+}
+
+.mandate-detail ul {
+list-style: none;
+}
+
+.mandate-detail li {
+padding: 8px 0;
+color: var(--ink);
+position: relative;
+padding-left: 28px;
+}
+
+.mandate-detail li:before {
+content: "✓";
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: 700;
+}
+
+.form-section {
+background: linear-gradient(135deg, var(--primary) 0%, #0a4080 100%);
+color: var(--on-dark);
+}
+
+.form-section h2,
+.form-section p {
+color: var(--on-dark);
+}
+
+.form-container {
+max-width: 600px;
+margin: 0 auto;
+background: rgba(255, 255, 255, 0.98);
+padding: 48px;
+border-radius: 12px;
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h3 {
+color: var(--primary);
+font-size: 28px;
+margin-bottom: 12px;
+text-align: center;
+font-weight: 300;
+}
+
+.form-container p {
+color: var(--ink-soft);
+text-align: center;
+margin-bottom: 32px;
+}
+
+.form-group {
+margin-bottom: 24px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+color: var(--ink);
+font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+width: 100%;
+padding: 12px 16px;
+border: 2px solid #e2e8f0;
+border-radius: 6px;
+font-size: 15px;
+font-family: 'Inter', sans-serif;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+outline: none;
+border-color: var(--accent);
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.form-submit {
+width: 100%;
+padding: 14px;
+background: var(--accent);
+color: #ffffff;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+background: #9a0f32;
+transform: translateY(-1px);
+}
+
+.thank-you {
+display: none;
+text-align: center;
+padding: 40px;
+background: #d4edda;
+border: 2px solid #28a745;
+border-radius: 8px;
+color: #155724;
+}
+
+.thank-you h3 {
+color: #155724;
+margin-bottom: 12px;
+font-weight: 300;
+}
+
+.disclosure {
+background: var(--bg-alt);
+padding: 60px 0;
+}
+
+.disclosure-content {
+max-width: 900px;
+margin: 0 auto;
+font-size: 13px;
+line-height: 1.8;
+color: var(--ink-soft);
+}
+
+.disclosure-content p {
+margin-bottom: 16px;
+}
+
+footer {
+background: var(--primary);
+color: var(--on-dark);
+padding: 60px 0 30px;
+}
+
+footer p,
+footer a {
+color: var(--on-dark);
+}
+
+.footer-content {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 60px;
+margin-bottom: 40px;
+}
+
+.footer-brand p {
+margin-top: 16px;
+opacity: 0.9;
+line-height: 1.7;
+}
+
+.footer-links h4 {
+color: var(--on-dark);
+margin-bottom: 16px;
+font-size: 16px;
+font-weight: 300;
+}
+
+.footer-links ul {
+list-style: none;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+text-decoration: none;
+opacity: 0.85;
+transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+opacity: 1;
+}
+
+.footer-bottom {
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+padding-top: 30px;
+text-align: center;
+opacity: 0.8;
+font-size: 14px;
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+.hero h1 {
+font-size: 44px;
+}
+
+.grid-3,
+.grid-4 {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.stats {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.process-steps {
+grid-template-columns: 1fr;
+}
+
+.mandate-grid {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+
+.footer-content {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+}
+
+@media (max-width: 768px) {
+.hero {
+min-height: auto;
+}
+
+.hero-content {
+padding: 60px 0;
+}
+
+.hero h1 {
+font-size: 36px;
+}
+
+.hero p {
+font-size: 18px;
+}
+
+.hero-buttons {
+flex-direction: column;
+}
+
+.hero-buttons .btn {
+width: 100%;
+text-align: center;
+}
+
+section {
+padding: 60px 0;
+}
+
+.section-header h2 {
+font-size: 32px;
+}
+
+.grid,
+.grid-3,
+.grid-4 {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.stats {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.stat-value {
+font-size: 36px;
+}
+
+.form-container {
+padding: 32px 24px;
+}
+}
+</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=QC-1776617428477"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','QC-1776617428477');</script>
 <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
 <script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1784653013/czixgy8shanglme5wocw.jpg" alt="Equitable Capital Advisors logo">
-            <a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-primary">Schedule a Call</a>
-        </div>
-    </header>
 
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1784657948/ua7lctsbfxcltjeygb5p.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <span class="eyebrow">StoneRiver Investment Fund III</span>
-                <h1>High-Quality Multifamily <span class="highlight">in Attractive Submarkets</span></h1>
-                <p>StoneRiver Fund III seeks strong risk-adjusted returns by acquiring, improving, and managing high-quality multifamily properties across the Southeastern U.S. The strategy spans value-add, core-plus, ground-up development, and opportunistic investments, underwritten to a 12–16% gross IRR over a typical 3–5 year hold.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Request Fund Materials</a>
-                    <a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-secondary">Book a Call</a>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">31.39%</span>
-                        <span class="stat-label">Avg Net IRR — Realized</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1.89x</span>
-                        <span class="stat-label">Avg Net Equity Multiple</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">12–16%</span>
-                        <span class="stat-label">Target Gross IRR</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3–5 yr</span>
-                        <span class="stat-label">Target Hold Period</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+<div class="container">
+<div class="logo">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1784653013/czixgy8shanglme5wocw.jpg" alt="Equitable Capital Advisors logo">
+</div>
+<a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-primary">Schedule a Call</a>
+</div>
+</header>
 
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">About Us</span>
-                <h2>About Equitable Capital Advisors</h2>
-                <p>A relationship-driven capital markets and advisory firm built around a single operating principle: every node in the network gets value added, in whatever form fits them best, before revenue is ever discussed.</p>
-            </div>
-            <div class="reveal">
-                <p style="font-size: 1.125rem; line-height: 1.8; color: var(--ink-soft); max-width: 900px; margin: 0 auto;">Andrew Glaze (West Point, Army veteran, Columbia MBA, ~10 years NASDAQ public board experience) operates through three platforms — GT Securities (260 bankers, $50B+ executed transactions, FINRA/SIPC member) for capital placement and M&A advisory; NFP/Aon for insurance and risk solutions referrals (Equitable is a Nevada-licensed insurance agency that refers all such work); and the AI Client & Partner Development Desk powered by Victory Vision for technology-enabled relationship intelligence and outreach. Equitable does not sell professional services off a price sheet. It identifies what each contact most needs — capital, partners, introductions, advisory, AI infrastructure, or a kind word — leads with that, and earns revenue when the routed value compounds into a transaction or retained engagement.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<video class="hero-video" autoplay muted loop playsinline>
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1784657948/ua7lctsbfxcltjeygb5p.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="container">
+<span class="eyebrow">StoneRiver Investment Fund III</span>
+<h1>High-quality multifamily in <span class="highlight">attractive submarkets</span></h1>
+<p>StoneRiver Fund III seeks strong risk-adjusted returns by acquiring, improving, and managing high-quality multifamily properties across the Southeastern U.S. The strategy spans value-add, core-plus, ground-up development, and opportunistic investments, underwritten to a 12–16% gross IRR over a typical 3–5 year hold.</p>
+<div class="hero-buttons">
+<a href="#fund-details" class="btn btn-light">View Fund Details</a>
+<a href="https://calendly.com/andrewglaze/new-meeting" class="btn btn-secondary">Book a Call</a>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="dark" id="mandate">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Investment Thesis</span>
-                <h2>Fund III Mandate</h2>
-                <p>The fund's parameters are scoped for institutional allocators and qualified purchasers seeking durable cash flow and appreciation in undersupplied housing markets.</p>
-            </div>
-            <div class="mandate-grid reveal">
-                <div class="mandate-card">
-                    <h3>Target Size</h3>
-                    <p>$200M target · $300M hard cap · $99.35M raised to date. Fund III was formed to meet growing demand from StoneRiver's established investor base while opening access to new sources of capital.</p>
-                </div>
-                <div class="mandate-card">
-                    <h3>Strategy</h3>
-                    <p>Garden-style multifamily — value-add, core-plus, ground-up development & opportunistic investments across multiple risk-return profiles.</p>
-                </div>
-                <div class="mandate-card">
-                    <h3>Geography</h3>
-                    <p>Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina, South Carolina, Tennessee, Texas, Virginia.</p>
-                </div>
-                <div class="mandate-card">
-                    <h3>Hold Period</h3>
-                    <p>Typical 3–5 year hold with flexibility for accelerated exits or extended value creation depending on market conditions and asset performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="fund-details">
+<div class="container">
+<div class="stats">
+<div class="stat reveal">
+<div class="stat-value">31.39%</div>
+<div class="stat-label">Avg Net IRR — Realized</div>
+</div>
+<div class="stat reveal">
+<div class="stat-value">1.89x</div>
+<div class="stat-label">Avg Net Equity Multiple</div>
+</div>
+<div class="stat reveal">
+<div class="stat-value">12–16%</div>
+<div class="stat-label">Target Gross IRR</div>
+</div>
+<div class="stat reveal">
+<div class="stat-value">3–5 yr</div>
+<div class="stat-label">Target Hold Period</div>
+</div>
+</div>
 
-    <section class="alt" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Our Services</span>
-                <h2>How Equitable Adds Value</h2>
-                <p>A value-routing toolkit, not a product catalog. Tools deployed based on what each contact needs most.</p>
-            </div>
-            <div class="features-grid reveal">
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="30" r="28" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <path d="M30 15v30M15 30h30" stroke="#bb133e" stroke-width="3" stroke-linecap="round"/>
-                    </svg>
-                    <h3>Equity Capital Access</h3>
-                    <p>Emerging-manager LP placement (Provenance Consumer Fund III/IV, StoneRiver Investment Fund III), real estate LP placement, growth and operating equity. We connect capital seekers with the right institutional and family office allocators.</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="10" width="40" height="40" rx="4" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <path d="M20 25h20M20 30h20M20 35h12" stroke="#bb133e" stroke-width="2.5" stroke-linecap="round"/>
-                    </svg>
-                    <h3>Debt Capital Access</h3>
-                    <p>Institutional direct lenders (Stone Point Credit, Axonic, Bardin Hill, U.S. institutional private credit lenders engaged through the GT Securities partnership). Placement of borrowers into the right lender box for $1-100M tickets.</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="8" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <circle cx="40" cy="20" r="8" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <circle cx="30" cy="40" r="8" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <path d="M24 26l6 8M36 26l-6 8" stroke="#bb133e" stroke-width="2"/>
-                    </svg>
-                    <h3>Strategic Introductions</h3>
-                    <p>Into PE firms and their portfolio companies, allocator networks, family offices, RIA platforms, veteran-network businesses. Leveraging West Point, Columbia, Princeton, and Army veteran networks across ~5,000 LinkedIn connections.</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 45V20l15-10 15 10v25" stroke="#0a3161" stroke-width="2" fill="none"/>
-                        <rect x="24" y="32" width="12" height="13" fill="#bb133e"/>
-                        <path d="M10 45h40" stroke="#0a3161" stroke-width="2.5" stroke-linecap="round"/>
-                    </svg>
-                    <h3>M&A Advisory</h3>
-                    <p>GT Securities 260 bankers covering sell-side, buyside with staple financing, recap, strategic introductions. Lehman-formula success fees for middle-market transactions and founder-led business exits.</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="12" y="15" width="36" height="30" rx="3" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <path d="M20 25l8 6 12-10" stroke="#bb133e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
-                    <h3>Placement Agent Mandates</h3>
-                    <p>$25-50K monthly retainer + 2% placement fee + 6-month tail for emerging managers. Capital strategy, fund positioning, investor targeting, and systematic outreach to institutional allocators and family offices.</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="25" r="10" stroke="#0a3161" stroke-width="2" fill="#f6f8fb"/>
-                        <path d="M20 50c0-8 4-15 10-15s10 7 10 15" stroke="#0a3161" stroke-width="2" fill="none"/>
-                        <circle cx="30" cy="25" r="4" fill="#bb133e"/>
-                    </svg>
-                    <h3>AI Client Development</h3>
-                    <p>Victory Vision-powered outbound, content, relationship tracking. $10-25K monthly retainer for boutique founder-led firms needing repeatable business development infrastructure and technology-enabled relationship intelligence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="mandate-grid reveal">
+<div class="mandate-detail">
+<h3>Mandate</h3>
+<p>The fund's parameters are scoped for institutional allocators and qualified purchasers seeking durable cash flow and appreciation in undersupplied housing markets.</p>
+<h3>Target Size</h3>
+<p><strong>$200M</strong> target · <strong>$300M</strong> hard cap · <strong>$99.35M</strong> raised to date</p>
+</div>
+<div class="mandate-detail">
+<h3>Strategy</h3>
+<p>Garden-style multifamily — value-add, core-plus, ground-up & opportunistic</p>
+<h3>Geography</h3>
+<p>AL, AR, FL, GA, KY, LA, MS, NC, SC, TN, TX, VA</p>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="icp-section" id="ideal-clients">
-        <div class="container">
-            <div class="icp-content">
-                <span class="eyebrow">Ideal Client Profile</span>
-                <h2>Who This Is For</h2>
-                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.95);">Equitable operates a two-sided network with role-specific engagement patterns. We serve capital deployers, capital seekers, and channel partners across the sub-institutional $1-100M ticket band.</p>
-                <div class="icp-grid reveal">
-                    <div class="icp-category">
-                        <h3>Capital Deployers</h3>
-                        <p>Demand-side counterparties who consume opportunities. Revenue from this side comes from placement fees on what they fund through Equitable. We never pitch retainer services to this group.</p>
-                        <ul>
-                            <li>Institutional direct lenders & private credit funds</li>
-                            <li>Family offices & multi-family offices with permanent capital</li>
-                            <li>Emerging-manager-friendly funds of funds</li>
-                            <li>UHNW RIAs & allocator-trustees at endowments</li>
-                        </ul>
-                    </div>
-                    <div class="icp-category">
-                        <h3>Capital Seekers</h3>
-                        <p>Supply-side counterparties who need capital or business development. Revenue from this side comes from placement retainers and per-transaction fees.</p>
-                        <ul>
-                            <li>Emerging asset managers raising Fund I-III</li>
-                            <li>Founder-led operating businesses with capital event probability in 12-24 months</li>
-                            <li>LMM borrowers $1-100M ticket (gov contractors, ecommerce, specialty finance, franchise, CRE)</li>
-                            <li>Boutique founder-led service firms needing repeatable BD infrastructure</li>
-                        </ul>
-                    </div>
-                    <div class="icp-category">
-                        <h3>Channel Partners</h3>
-                        <p>Other senior bankers and advisors with whom we coordinate referrals in both directions. Mutual value exchange through network access.</p>
-                        <ul>
-                            <li>West Point / veteran-network bankers (AmeriVet, Jefferies, Cantor)</li>
-                            <li>Boutique M&A shops</li>
-                            <li>Attorneys with HNW books</li>
-                        </ul>
-                    </div>
-                    <div class="icp-category">
-                        <h3>Dual-Role Contacts</h3>
-                        <p>Rare but high-value: asset managers who are both raising their next fund AND deploying current fund capital. We approach each conversation by asking what they need most right now.</p>
-                        <ul>
-                            <li>Emerging managers with Fund II/III raising + active deployment</li>
-                            <li>Family offices with both LP allocation and direct investment mandates</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section-alt">
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">About Us</span>
+<h2>Equitable Capital <em>Advisors</em></h2>
+<p>Equitable Capital Advisors is a relationship-driven capital markets and advisory firm built around a single operating principle: every node in the network gets value added, in whatever form fits them best, before revenue is ever discussed.</p>
+</div>
+<div class="reveal">
+<p style="max-width: 900px; margin: 0 auto; color: var(--ink-soft); line-height: 1.8; font-size: 17px;">Andrew Glaze (West Point, Army veteran, Columbia MBA, ~10 years NASDAQ public board experience) operates through three platforms — GT Securities (260 bankers, $50B+ executed transactions, FINRA/SIPC member) for capital placement and M&A advisory; NFP/Aon for insurance and risk solutions referrals (Equitable is a Nevada-licensed insurance agency that refers all such work); and the AI Client & Partner Development Desk powered by Victory Vision for technology-enabled relationship intelligence and outreach. Equitable does not sell professional services off a price sheet. It identifies what each contact most needs — capital, partners, introductions, advisory, AI infrastructure, or a kind word — leads with that, and earns revenue when the routed value compounds into a transaction or retained engagement.</p>
+</div>
+</div>
+</section>
 
-    <section id="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Our Process</span>
-                <h2>How It Works</h2>
-                <p>We lead with value, not pitch. Every engagement begins by identifying what you need most.</p>
-            </div>
-            <div class="process-steps reveal">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Discovery</h3>
-                    <p>We start by understanding your situation, goals, and immediate needs. Capital? Partners? Introductions? Advisory? AI infrastructure? We listen first, then identify which of our nine toolkit items fits best.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Value Routing</h3>
-                    <p>We deploy the right tool from our network: debt or equity capital access, M&A partners, strategic introductions, placement agent services, AI-powered outreach, or simply a valuable connection. Value flows before revenue is ever discussed.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Transaction or Engagement</h3>
-                    <p>When the routed value compounds into a closed transaction or retained engagement, compensation follows naturally: placement fees, success fees, retainer mandates, or per-transaction fees depending on the structure that fits your situation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section>
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">Our Toolkit</span>
+<h2>Value-Routing <em>Toolkit</em></h2>
+<p>We deploy the right tool based on what each contact needs most — not what we want to sell.</p>
+</div>
+<div class="grid reveal">
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="16" width="48" height="36" rx="4" stroke="#0a3161" stroke-width="3"/>
+<path d="M32 28v12M26 34h12" stroke="#bb133e" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<h3>Debt Capital <em>Access</em></h3>
+<p>Institutional direct lenders (Stone Point Credit, Axonic, Bardin Hill, U.S. institutional private credit lenders engaged through the GT Securities partnership, East Beach LA private credit, others). Placement of borrowers into the right lender box.</p>
+</div>
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="32" cy="32" r="20" stroke="#0a3161" stroke-width="3"/>
+<path d="M32 20v12l8 4" stroke="#bb133e" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<h3>Equity Capital <em>Access</em></h3>
+<p>Emerging-manager LP placement (e.g. Provenance Consumer Fund III/IV, StoneRiver Investment Fund III), real estate LP placement, growth/operating equity. Connecting capital seekers with the right allocators.</p>
+</div>
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 32h32M32 16l16 16-16 16" stroke="#0a3161" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="32" cy="32" r="4" fill="#bb133e"/>
+</svg>
+<h3>M&A <em>Partners</em></h3>
+<p>GT Securities 260 bankers covering sell-side, buyside with staple financing, recap, strategic introductions. Lehman-formula success fees on closed transactions.</p>
+</div>
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="8" stroke="#0a3161" stroke-width="3"/>
+<circle cx="44" cy="20" r="8" stroke="#0a3161" stroke-width="3"/>
+<circle cx="32" cy="44" r="8" stroke="#0a3161" stroke-width="3"/>
+<path d="M26 26l6 12M38 26l-6 12" stroke="#bb133e" stroke-width="2.5"/>
+</svg>
+<h3>Strategic <em>Introductions</em></h3>
+<p>Into PE firms and their portfolio companies, allocator networks, family offices, RIA platforms, veteran-network businesses. Leveraging West Point, Columbia, Princeton, and Army veteran networks.</p>
+</div>
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="12" y="12" width="40" height="40" rx="4" stroke="#0a3161" stroke-width="3"/>
+<path d="M22 28h20M22 36h14" stroke="#bb133e" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<h3>Advisory <em>Services</em></h3>
+<p>Placement-agent mandates ($25-50K monthly retainer + 2% placement fee + 6-month tail), capital strategy, M&A advisory. Structured engagements for emerging managers and founder-led businesses.</p>
+</div>
+<div class="card">
+<svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32 12v40M12 32h40" stroke="#0a3161" stroke-width="3" stroke-linecap="round"/>
+<circle cx="32" cy="32" r="12" stroke="#bb133e" stroke-width="3"/>
+</svg>
+<h3>AI Outreach <em>Infrastructure</em></h3>
+<p>Victory Vision-powered outbound, content, relationship tracking. Done-for-you AI Client & Partner Development Desk retainers ($10-25K/month) for boutique founder-led firms needing repeatable BD infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="form-section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Get Started</span>
-                <h2>Request Fund Materials</h2>
-                <p>Interested in learning more about StoneRiver Fund III or exploring how Equitable can support your capital needs? Let's start a conversation.</p>
-            </div>
-            <div class="form-container reveal">
-                <form id="leadForm">
-                    <input type="hidden" name="source" value="landing">
-                    <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
-                    <input type="hidden" name="page_slug" value="sr-creiii">
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company / Fund Name</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">What are you most interested in? (Optional)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="E.g., StoneRiver Fund III materials, LP placement services, debt capital access, strategic introductions..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary form-submit">Submit Request</button>
-                </form>
-                
-                <div class="thank-you" id="thankYou">
-                    <h3 style="color: #155724; margin-bottom: 1rem; font-style: normal;">Thank you for your interest!</h3>
-                    <p style="color: #155724;">Andrew will be in touch within 24 hours. In the meantime, feel free to <a href="https://calendly.com/andrewglaze/new-meeting" style="color: #155724; font-weight: 700;">schedule a call directly</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section-dark">
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">Target Audience</span>
+<h2>Who This <em>Is For</em></h2>
+<p>We serve a two-sided network with role-specific engagement patterns.</p>
+</div>
+<div class="grid reveal">
+<div class="card">
+<h3>Capital <em>Deployers</em></h3>
+<p>Institutional direct lenders, private credit funds, family offices, emerging-manager-friendly FoFs, UHNW RIAs, multi-family offices with permanent capital, allocator-trustees at endowments. You consume opportunities, never pay for services. Revenue from this side comes from placement fees on what you fund through Equitable.</p>
+</div>
+<div class="card">
+<h3>Capital <em>Seekers</em></h3>
+<p>Emerging asset managers raising Fund I-III; founder-led operating businesses with capital event probability in 12-24 months; boutique founder-led service firms needing repeatable BD infrastructure; LMM borrowers $1-100M ticket; gov contractors; ecommerce inventory finance; specialty finance; franchise operators; CRE sponsors. Revenue from this side comes from placement retainers and per-transaction fees.</p>
+</div>
+<div class="card">
+<h3>Channel <em>Partners</em></h3>
+<p>Other senior bankers/advisors — coordinated referrals both directions. WP/vet-network bankers (AmeriVet, Jefferies, Cantor), boutique M&A shops, attorneys with HNW books. We build mutually beneficial referral relationships.</p>
+</div>
+<div class="card">
+<h3>Dual-Role <em>Contacts</em></h3>
+<p>Asset managers raising the next fund AND deploying current fund capital. Rare but valuable. We approach each conversation by asking what you need most right now; lead with that single tool; keep the rest in back pocket.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="disclosure" id="disclosure">
-        <div class="container">
-            <p><strong>Important Disclosure:</strong> Equitable Capital Advisors operates through GT Securities, LLC (member FINRA/SIPC) for securities transactions, capital placement, and M&A advisory services. Equitable Capital Advisors is a Nevada-licensed insurance agency that refers all insurance and risk solutions work to NFP/Aon; no insurance services are provided directly. This page is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Any such offer or solicitation will be made only by means of a confidential private placement memorandum and related subscription documents, and only to accredited investors or qualified purchasers as defined under applicable securities laws. Past performance is not indicative of future results. All investments involve risk, including the possible loss of principal. StoneRiver Investment Fund III information presented herein is provided by the fund sponsor; Equitable Capital Advisors acts solely as a placement agent and does not guarantee fund performance or suitability for any particular investor. Please consult your legal, tax, and financial advisors before making any investment decision.</p>
-        </div>
-    </section>
+<section>
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">Process</span>
+<h2>How It <em>Works</em></h2>
+<p>We lead with value, not pitch. Revenue follows when routed value compounds into a transaction or retained engagement.</p>
+</div>
+<div class="process-steps">
+<div class="step reveal">
+<div class="step-number">1</div>
+<h3>Discovery</h3>
+<p>We identify what you need most right now — capital, partners, introductions, advisory, AI infrastructure, or a listening ear. Every conversation starts with understanding your specific situation and goals.</p>
+</div>
+<div class="step reveal">
+<div class="step-number">2</div>
+<h3>Value <em>Routing</em></h3>
+<p>We deploy the right tool from our toolkit based on your needs. This might be a lender introduction, an LP placement, a strategic partner connection, or AI-powered outreach infrastructure — whatever moves you forward.</p>
+</div>
+<div class="step reveal">
+<div class="step-number">3</div>
+<h3>Engagement</h3>
+<p>When the routed value compounds into a transaction or retained relationship, we structure the appropriate engagement: placement fees, retainer mandates, M&A success fees, or AI desk retainers. Revenue is the result, not the starting point.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <p style="color: var(--on-dark); margin: 0;">&copy; 2025 Equitable Capital Advisors. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="mailto:andrew@equitablecapitaladvisors.com">Contact</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<section class="form-section" id="contact">
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">Get Started</span>
+<h2>Start a <em>Conversation</em></h2>
+<p>Whether you're seeking capital for StoneRiver Fund III or exploring other opportunities, let's start a conversation.</p>
+</div>
+<div class="form-container reveal">
+<form id="leadForm" action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
+<input type="hidden" name="source" value="landing">
+<input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+<input type="hidden" name="slug" value="sr-creiii">
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="company">Company / Fund</label>
+<input type="text" id="company" name="company">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone">
+</div>
+<div class="form-group">
+<label for="message">What are you looking for? (optional)</label>
+<textarea id="message" name="message" rows="4"></textarea>
+</div>
+<button type="submit" class="form-submit">Submit Inquiry</button>
+</form>
+<div class="thank-you" id="thankYou">
+<h3>Thank you for reaching out!</h3>
+<p>We'll be in touch within 24 hours to discuss how we can add value to your situation.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <script>
-        // Intersection Observer for reveal animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<section class="disclosure">
+<div class="container">
+<div class="disclosure-content">
+<p><strong>Important Disclosures:</strong> Equitable Capital Advisors operates in partnership with GT Securities, LLC, a FINRA/SIPC member firm. Securities-related services, including capital placement and M&A advisory, are conducted through GT Securities, LLC. Equitable Capital Advisors is a Nevada-licensed insurance agency; all insurance and risk solutions work is referred to NFP/Aon and conducted through those platforms. Past performance is not indicative of future results. All investments involve risk, including the potential loss of principal. The information presented regarding StoneRiver Investment Fund III is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Any such offer or solicitation will be made only by means of a confidential private placement memorandum and related documents, and only to qualified investors in jurisdictions where permitted by law. Investors should carefully review all offering documents and consult with their own legal, tax, and financial advisors before making any investment decision.</p>
+<p>Equitable Capital Advisors and its principals may receive compensation in the form of placement fees, retainer fees, success fees, and other arrangements as disclosed in engagement agreements. Andrew Glaze is the principal of Equitable Capital Advisors and brings approximately 10 years of NASDAQ public board experience, West Point and Columbia MBA credentials, and Army veteran background to client relationships. This communication is provided for informational purposes and does not constitute investment, legal, or tax advice. Recipients should conduct their own due diligence and consult appropriate professional advisors before making any investment or business decisions.</p>
+</div>
+</div>
+</section>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<h3 style="color: var(--on-dark); margin-bottom: 12px; font-weight: 300;">Equitable Capital Advisors</h3>
+<p>Relationship-driven capital markets and advisory. Value first, revenue second.</p>
+<p style="margin-top: 20px;">
+<strong>Contact:</strong><br>
+<a href="mailto:andrew@equitablecapitaladvisors.com" style="text-decoration: none;">andrew@equitablecapitaladvisors.com</a>
+</p>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#fund-details">Fund Details</a></li>
+<li><a href="#contact">Get Started</a></li>
+<li><a href="https://calendly.com/andrewglaze/new-meeting">Schedule a Call</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Legal</h4>
+<ul>
+<li><a href="#disclosure">Disclosures</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 Equitable Capital Advisors. All rights reserved. | Securities services through GT Securities, LLC (FINRA/SIPC member)</p>
+</div>
+</div>
+</footer>
 
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.getElementById('leadForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData.entries());
-            
-            try {
-                const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                if (response.ok) {
-                    document.getElementById('leadForm').style.display = 'none';
-                    document.getElementById('thankYou').classList.add('show');
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                alert('There was an error submitting your request. Please email andrew@equitablecapitaladvisors.com directly.');
-            }
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-    </script>
 <script>
-(function(){
-  var PAGE_ID="201",CUSTOMER_ID="glaze@equitablecap.com",AB_VARIANT="null";
-  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
-  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
-  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
-  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
-  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
-})();
+// Intersection Observer for scroll reveals
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('active');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+observer.observe(el);
+});
+
+// Form submission
+document.getElementById('leadForm').addEventListener('submit', async (e) => {
+e.preventDefault();
+const form = e.target;
+const formData = new FormData(form);
+const data = Object.fromEntries(formData.entries());
+
+try {
+const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(data)
+});
+
+if (response.ok) {
+form.style.display = 'none';
+document.getElementById('thankYou').style.display = 'block';
+} else {
+alert('There was an issue submitting your form. Please try again or email andrew@equitablecapitaladvisors.com directly.');
+}
+} catch (error) {
+alert('There was an issue submitting your form. Please try again or email andrew@equitablecapitaladvisors.com directly.');
+}
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+const href = this.getAttribute('href');
+if (href !== '#' && href !== '#disclosure') {
+e.preventDefault();
+const target = document.querySelector(href);
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+}
+});
+});
 </script>
+
+<script>(function(){var CID="glaze@equitablecap.com",SLUG="sr-creiii",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
 </body>
 </html>
