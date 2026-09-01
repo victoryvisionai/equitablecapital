@@ -323,7 +323,14 @@
     <div class="cta-section" id="cta-section">
         <h2>Understand the Options Before You Choose the Path</h2>
         <p>Download the Private Equity Operator’s Playbook now to gain insights and strategies for success.</p>
-        <a href="#cta-section" class="cta-button">Get the Free Private Equity Operator’s Playbook</a>
+        <form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST" style="display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto;">
+            <input type="hidden" name="customer_id" value="glaze@equitablecap.com">
+            <input type="hidden" name="slug" value="playbook">
+            <input type="hidden" name="source" value="lead_magnet">
+            <input type="text" name="name" placeholder="First Name" required style="padding:12px;border:1px solid #ccc;border-radius:6px;font-size:16px;">
+            <input type="email" name="email" placeholder="Work Email" required style="padding:12px;border:1px solid #ccc;border-radius:6px;font-size:16px;">
+            <button type="submit" class="cta-button">Get the Free Private Equity Operator's Playbook</button>
+        </form>
     </div>
 
     <div class="footer">
